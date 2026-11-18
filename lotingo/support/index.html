@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lotingo - Support</title>
+<meta name="description" content="Lotingo support: help with the bingo and tambola app.">
+<link rel="canonical" href="https://nanoko.app/lotingo/support/">
+<link rel="alternate" hreflang="en" href="https://nanoko.app/lotingo/support/">
+<link rel="alternate" hreflang="vi" href="https://nanoko.app/lotingo/vi/support/">
+<link rel="alternate" hreflang="x-default" href="https://nanoko.app/lotingo/support/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lotingo">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:title" content="Lotingo - Support">
+<meta property="og:description" content="Lotingo support: help with the bingo and tambola app.">
+<meta property="og:url" content="https://nanoko.app/lotingo/support/">
+<meta property="og:image" content="https://nanoko.app/lotingo/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lotingo - Support">
+<meta name="twitter:description" content="Lotingo support: help with the bingo and tambola app.">
+<meta name="twitter:image" content="https://nanoko.app/lotingo/og-image.png">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" type="image/png" href="/lotingo/app-icon.png">
+<link rel="apple-touch-icon" href="/lotingo/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Sofia+Sans+Extra+Condensed:wght@900&display=swap">
+<link rel="stylesheet" href="/lotingo/style.css">
+<script>
+try {
+  var chosen = localStorage.getItem("lotingo-lang");
+  var langs = navigator.languages || [navigator.language || ""];
+  if (chosen === "vi" || (!chosen && /^vi\b/i.test(langs[0] || ""))) {
+    location.replace("/lotingo/vi" + location.pathname.replace(/^\/lotingo/, "") + location.search + location.hash);
+  }
+} catch (e) {}
+</script>
+</head>
+<body>
+<header class="header">
+<a class="brand" href="/lotingo/"><img src="/lotingo/app-icon.png" alt="" width="36" height="36"><span><strong>Lotingo</strong><span>Bingo &amp; Tambola</span></span></a>
+<nav class="nav"><a class="hide-sm" href="/lotingo/privacy/">Privacy</a><a class="hide-sm" href="/lotingo/support/">Support</a><a class="lang" href="/lotingo/vi/support/" hreflang="vi" lang="vi">VI</a></nav>
+</header>
+<main class="page">
+<h1>Support</h1>
+<p class="intro">Need a hand with Lotingo, or have an idea that would make it better? We would love to hear from you.</p>
+<div class="contact">
+<div class="contact-icon" aria-hidden="true">✉️</div>
+<div class="contact-text">
+<h2>Email us</h2>
+<p>Tell us what happened and include your phone model, its system version and the app version, which you can find at the very bottom of the Settings screen. It helps us find the problem much faster.</p>
+<a class="button" href="mailto:phuongnamtruong.it@gmail.com?subject=Lotingo">Send an email</a>
+<p class="contact-mail"><a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></p>
+</div>
+</div>
+<h2>Frequently asked questions</h2>
+<div class="faqs">
+<details class="faq">
+<summary>Does Lotingo need an internet connection?</summary>
+<p>No. Lotingo requires no internet connection, and everything from calling the numbers to checking a Bingo runs on the phone itself. The app only goes online to load ads and to send crash reports and usage statistics, and it simply skips those when there is no connection.</p>
+</details>
+<details class="faq">
+<summary>The app closed in the middle of a round. Is the round lost?</summary>
+<p>No. Open Lotingo again and the round carries on from exactly where it stopped, with every number that was already drawn.</p>
+</details>
+<details class="faq">
+<summary>I tapped a link, the app opened and asked me to update. Why?</summary>
+<p>That link was made for a newer version of Lotingo than the one on your phone. Update the app from Google Play or the App Store, then tap the link again.</p>
+</details>
+<details class="faq">
+<summary>How do I change my privacy choices?</summary>
+<p>The <a href="/lotingo/privacy/">Privacy Policy</a> explains what the app collects and where you can change each choice.</p>
+</details>
+</div>
+</main>
+<footer class="footer">
+<div class="links"><a href="/lotingo/privacy/">Privacy policy</a>·<a href="/lotingo/support/">Support</a>·<a href="mailto:phuongnamtruong.it@gmail.com">Email</a></div>
+No money, no bets.<br>© 2026 Lotingo · Truong Phuong Nam
+</footer>
+<script>
+document.querySelector(".nav .lang").addEventListener("click", function (e) {
+  try { localStorage.setItem("lotingo-lang", e.currentTarget.getAttribute("hreflang")); } catch (err) {}
+});
+</script>
+</body>
+</html>

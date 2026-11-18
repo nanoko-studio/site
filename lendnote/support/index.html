@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendnote - Support</title>
+    <meta name="description" content="Lendnote support: frequently asked questions and how to get in touch.">
+    <link rel="canonical" href="https://nanoko.app/lendnote/support/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lendnote">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Lendnote - Support">
+    <meta property="og:description" content="Lendnote support: frequently asked questions and how to get in touch.">
+    <meta property="og:url" content="https://nanoko.app/lendnote/support/">
+    <meta property="og:image" content="https://nanoko.app/lendnote/app-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lendnote - Support">
+    <meta name="twitter:description" content="Lendnote support: frequently asked questions and how to get in touch.">
+    <meta name="twitter:image" content="https://nanoko.app/lendnote/app-icon.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
+                         'Helvetica Neue', Arial, sans-serif;
+            background: #F5F5F0;
+            color: #1C1C1E;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── Bilingual visibility (same mechanism as index.html) ── */
+        [data-lang="en"] .lang-vi { display: none; }
+        [data-lang="vi"] .lang-en { display: none; }
+
+        /* ── Header ── */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #E5E5EA;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header img {
+            width: 52px;
+            height: 52px;
+            border-radius: 13px;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 { font-size: 20px; font-weight: 700; }
+        .header-text .subtitle { font-size: 13px; color: #8E8E93; margin-top: 1px; }
+        .nav-spacer { flex: 1; }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: inline-flex;
+            border: 1px solid #E5E5EA;
+            border-radius: 999px;
+            overflow: hidden;
+            background: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .lang-toggle button {
+            border: 0;
+            background: transparent;
+            color: #8E8E93;
+            padding: 6px 14px;
+            cursor: pointer;
+            font: inherit;
+        }
+        .lang-toggle button.active { background: #4CAF82; color: #fff; }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 28px 20px 72px;
+        }
+
+        /* ── Meta / contact card ── */
+        .meta-card {
+            background: #fff;
+            border: 1px solid #E5E5EA;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            row-gap: 8px;
+            column-gap: 20px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #8E8E93;
+            white-space: nowrap;
+            line-height: 1.7;
+        }
+
+        .meta-value { font-size: 14px; color: #1C1C1E; }
+        .meta-value a { color: #4CAF82; text-decoration: none; }
+        .meta-value a:hover { text-decoration: underline; }
+
+        /* ── Section cards ── */
+        .section {
+            background: #fff;
+            border: 1px solid #E5E5EA;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1C1C1E;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3A3A3C;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        p { font-size: 15px; color: #3A3A3C; margin-bottom: 10px; }
+        p:last-child { margin-bottom: 0; }
+
+        ul { padding-left: 20px; margin-bottom: 10px; }
+        li { font-size: 15px; color: #3A3A3C; margin-bottom: 5px; }
+
+        strong { color: #1C1C1E; font-weight: 600; }
+        em { font-style: italic; color: #4CAF82; }
+        a { color: #4CAF82; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Callout ── */
+        .callout {
+            background: #F0FBF5;
+            border-left: 3px solid #4CAF82;
+            border-radius: 0 10px 10px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #1C1C1E;
+        }
+
+        /* ── FAQ ── */
+        .faq-item { margin-bottom: 18px; }
+        .faq-item:last-child { margin-bottom: 0; }
+        .faq-q {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1C1C1E;
+            margin-bottom: 6px;
+        }
+        .faq-a { font-size: 15px; color: #3A3A3C; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #8E8E93;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .footer a { color: #4CAF82; }
+
+        /* ── Responsive ── */
+        @media (max-width: 560px) {
+            .header { padding: 16px; gap: 12px; }
+            .header img { width: 44px; height: 44px; border-radius: 11px; }
+            .header-text h1 { font-size: 18px; }
+            .container { padding: 20px 14px 60px; }
+            .section { padding: 18px 16px; }
+            .meta-card { padding: 16px 18px; }
+            .meta-grid { grid-template-columns: 1fr; row-gap: 4px; }
+            .meta-label { margin-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <img src="/lendnote/app-icon.png" alt="Lendnote">
+    <div class="header-text">
+        <h1>Lendnote</h1>
+        <p class="subtitle"><span class="lang-en">Support</span><span class="lang-vi">Hỗ trợ</span></p>
+    </div>
+    <div class="nav-spacer"></div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-set="en" class="active">EN</button>
+        <button type="button" data-set="vi">VI</button>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2><span class="lang-en">How can we help?</span><span class="lang-vi">Chúng tôi giúp gì được cho bạn?</span></h2>
+        <p>
+            <span class="lang-en">Lendnote is a personal finance app that helps you track money you lend to and borrow from people in your life - and, when you need it, turn any of those records into statistics, a shareable receipt, or a PDF statement. If you have a question, found a bug, or want to share feedback, we're happy to help - just reach out using the contact details below.</span>
+            <span class="lang-vi">Lendnote là ứng dụng tài chính cá nhân giúp bạn theo dõi các khoản cho mượn và đi vay trong cuộc sống - và khi cần, biến bất kỳ bản ghi nào thành số liệu thống kê, ảnh biên nhận chia sẻ được, hay tờ sao kê PDF. Nếu bạn có câu hỏi, gặp lỗi, hay muốn góp ý, chúng tôi luôn sẵn sàng - hãy liên hệ theo thông tin bên dưới.</span>
+        </p>
+    </div>
+
+    <div class="meta-card">
+        <div class="meta-grid">
+            <span class="meta-label"><span class="lang-en">App</span><span class="lang-vi">Ứng dụng</span></span>
+            <span class="meta-value">Lendnote</span>
+            <span class="meta-label"><span class="lang-en">Developer</span><span class="lang-vi">Nhà phát triển</span></span>
+            <span class="meta-value"><span class="lang-en">Truong Phuong Nam</span><span class="lang-vi">Trương Phương Nam</span></span>
+            <span class="meta-label">Email</span>
+            <span class="meta-value"><a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></span>
+            <span class="meta-label"><span class="lang-en">Phone</span><span class="lang-vi">Điện thoại</span></span>
+            <span class="meta-value"><a href="tel:+84344654113">+84 344 654 113</a></span>
+            <span class="meta-label"><span class="lang-en">Response Time</span><span class="lang-vi">Thời gian phản hồi</span></span>
+            <span class="meta-value"><span class="lang-en">Within 1–2 business days</span><span class="lang-vi">Trong vòng 1–2 ngày làm việc</span></span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><span class="lang-en">Frequently Asked Questions</span><span class="lang-vi">Câu hỏi thường gặp</span></h2>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">Where is my data stored?</span><span class="lang-vi">Dữ liệu của tôi được lưu ở đâu?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">All of your financial data - contacts, transactions, debt records, and any photos you attach - is stored <strong>locally on your device only</strong>. It is not uploaded to any cloud service. See our <a href="/lendnote/privacy/">Privacy Policy</a> for full details.</span>
+                <span class="lang-vi">Toàn bộ dữ liệu tài chính của bạn - danh bạ, giao dịch, khoản nợ, và mọi ảnh bạn đính kèm - được lưu <strong>chỉ trên thiết bị của bạn</strong>, không tải lên bất kỳ dịch vụ đám mây nào. Xem <a href="/lendnote/privacy/">Chính sách bảo mật</a> để biết đầy đủ chi tiết.</span>
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">How does the Smart Add feature work?</span><span class="lang-vi">Tính năng Thêm Nhanh hoạt động thế nào?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">With Smart Add you can type a transaction in plain language (for example, <em>"Lent John $50 for lunch"</em>). The text is sent securely to our AI parsing service, which extracts the amount, person, date, and type. The text is not retained after processing, and no other app data is sent. AI results may not always be accurate, so review them before saving.</span>
+                <span class="lang-vi">Với Thêm Nhanh, bạn gõ giao dịch bằng ngôn ngữ thường ngày (ví dụ: <em>"Cho Minh mượn 500k, hẹn trả cuối tháng"</em>). Đoạn văn bản được gửi an toàn tới dịch vụ phân tích AI để trích ra số tiền, tên người, ngày và loại giao dịch. Văn bản không được lưu lại sau khi xử lý, và không có dữ liệu nào khác trong ứng dụng được gửi đi. Kết quả AI có thể chưa chính xác, nên hãy kiểm tra lại trước khi lưu.</span>
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">Can I keep other people out of the app?</span><span class="lang-vi">Tôi có thể chặn người khác mở ứng dụng không?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">Yes. Turn on <strong>App Lock</strong> in Settings and Lendnote will ask for your fingerprint or face before it opens, using the lock your device already has. There is no separate PIN to set or forget: if biometrics are unavailable, your device passcode unlocks the app.</span>
+                <span class="lang-vi">Có. Bật <strong>Khoá ứng dụng</strong> trong phần Cài đặt, Lendnote sẽ hỏi vân tay hoặc khuôn mặt trước khi mở, dùng chính khoá mà máy bạn đang dùng. Không có mã PIN riêng nào để đặt hay lo quên: khi không dùng được sinh trắc học, mã khoá máy sẽ mở ứng dụng.</span>
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">How do I send a debt to the other person?</span><span class="lang-vi">Làm sao gửi thông tin khoản nợ cho người kia?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">From a debt or a contact you can share a <strong>receipt image</strong>, a <strong>PDF statement</strong>, or a <strong>reminder message</strong> that the app writes for you. All three are created on your device and handed to your usual share sheet, so you pick the app that sends them. Lendnote never sends anything on its own.</span>
+                <span class="lang-vi">Từ một khoản nợ hoặc một người trong danh bạ, bạn có thể chia sẻ <strong>ảnh biên nhận</strong>, <strong>tờ sao kê PDF</strong>, hoặc <strong>tin nhắc nợ</strong> do ứng dụng soạn sẵn. Cả ba đều được tạo ngay trên máy rồi chuyển sang khung chia sẻ quen thuộc, bạn tự chọn ứng dụng để gửi. Lendnote không bao giờ tự gửi đi.</span>
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">How do I delete my data?</span><span class="lang-vi">Làm sao xoá dữ liệu của tôi?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">Because your data lives only on your device, you can remove individual records inside the app - deleting a transaction also deletes the photos attached to it - or delete everything at once by uninstalling Lendnote.</span>
+                <span class="lang-vi">Vì dữ liệu chỉ nằm trên máy bạn, bạn có thể xoá từng bản ghi ngay trong ứng dụng - xoá một giao dịch là xoá luôn ảnh đính kèm của nó - hoặc xoá sạch một lần bằng cách gỡ cài đặt Lendnote.</span>
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q"><span class="lang-en">How do I report a bug or request a feature?</span><span class="lang-vi">Báo lỗi hoặc đề xuất tính năng thế nào?</span></p>
+            <p class="faq-a">
+                <span class="lang-en">Email us at <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a>. Please include your device model and OS version so we can help faster.</span>
+                <span class="lang-vi">Gửi email tới <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a>. Vui lòng ghi kèm model máy và phiên bản hệ điều hành để chúng tôi hỗ trợ nhanh hơn.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="callout">
+        <span class="lang-en">Still need help? Email <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a> and we'll get back to you within 1–2 business days.</span>
+        <span class="lang-vi">Vẫn cần hỗ trợ? Gửi email tới <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a>, chúng tôi sẽ phản hồi trong vòng 1–2 ngày làm việc.</span>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Lendnote · Truong Phuong Nam<br>
+    <a href="/lendnote/privacy/"><span class="lang-en">Privacy Policy</span><span class="lang-vi">Chính sách bảo mật</span></a>
+</div>
+
+<script>
+    (function () {
+        var root = document.documentElement;
+        var buttons = document.querySelectorAll('.lang-toggle button');
+        function setLang(lang) {
+            root.setAttribute('data-lang', lang);
+            root.setAttribute('lang', lang);
+            buttons.forEach(function (b) {
+                b.classList.toggle('active', b.getAttribute('data-set') === lang);
+            });
+            try { localStorage.setItem('lendnote-lang', lang); } catch (e) {}
+        }
+        buttons.forEach(function (b) {
+            b.addEventListener('click', function () { setLang(b.getAttribute('data-set')); });
+        });
+        var saved;
+        try { saved = localStorage.getItem('lendnote-lang'); } catch (e) {}
+        if (!saved) {
+            saved = (navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en';
+        }
+        setLang(saved);
+    })();
+</script>
+
+</body>
+</html>

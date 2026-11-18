@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nanoko.app/sitemap.xml

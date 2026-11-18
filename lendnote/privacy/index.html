@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendnote - Privacy Policy</title>
+    <meta name="description" content="Lendnote privacy policy: what the debt tracker stores on your device, what it sends to third parties and your rights.">
+    <link rel="canonical" href="https://nanoko.app/lendnote/privacy/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lendnote">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Lendnote - Privacy Policy">
+    <meta property="og:description" content="Lendnote privacy policy: what the debt tracker stores on your device, what it sends to third parties and your rights.">
+    <meta property="og:url" content="https://nanoko.app/lendnote/privacy/">
+    <meta property="og:image" content="https://nanoko.app/lendnote/app-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lendnote - Privacy Policy">
+    <meta name="twitter:description" content="Lendnote privacy policy: what the debt tracker stores on your device, what it sends to third parties and your rights.">
+    <meta name="twitter:image" content="https://nanoko.app/lendnote/app-icon.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
+                         'Helvetica Neue', Arial, sans-serif;
+            background: #F5F5F0;
+            color: #1C1C1E;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #E5E5EA;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header img {
+            width: 52px;
+            height: 52px;
+            border-radius: 13px;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 { font-size: 20px; font-weight: 700; }
+        .header-text .subtitle { font-size: 13px; color: #8E8E93; margin-top: 1px; }
+
+        .lang-switcher {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4CAF82;
+            padding: 4px 2px;
+            font-family: inherit;
+        }
+
+        .lang-btn.active {
+            font-weight: 700;
+            color: #1C1C1E;
+            cursor: default;
+        }
+
+        .lang-sep { color: #C7C7CC; }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 28px 20px 72px;
+        }
+
+        /* ── Meta card ── */
+        .meta-card {
+            background: #fff;
+            border: 1px solid #E5E5EA;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            row-gap: 8px;
+            column-gap: 20px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #8E8E93;
+            white-space: nowrap;
+            line-height: 1.7;
+        }
+
+        .meta-value { font-size: 14px; color: #1C1C1E; }
+        .meta-value a { color: #4CAF82; text-decoration: none; }
+        .meta-value a:hover { text-decoration: underline; }
+
+        /* ── Section cards ── */
+        .section {
+            background: #fff;
+            border: 1px solid #E5E5EA;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1C1C1E;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3A3A3C;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        p { font-size: 15px; color: #3A3A3C; margin-bottom: 10px; }
+        p:last-child { margin-bottom: 0; }
+
+        ul, ol { padding-left: 20px; margin-bottom: 10px; }
+        li { font-size: 15px; color: #3A3A3C; margin-bottom: 5px; }
+
+        strong { color: #1C1C1E; font-weight: 600; }
+        em { font-style: italic; color: #4CAF82; }
+        a { color: #4CAF82; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Tables ── */
+        .table-wrap { overflow-x: auto; margin-bottom: 10px; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+        th {
+            background: #F2F2F7;
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 600;
+            color: #3A3A3C;
+            border-bottom: 1px solid #E5E5EA;
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #F2F2F7;
+            color: #3A3A3C;
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        /* ── Callout ── */
+        .callout {
+            background: #F0FBF5;
+            border-left: 3px solid #4CAF82;
+            border-radius: 0 10px 10px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #1C1C1E;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #8E8E93;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* ── Language sections ── */
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        /* ── Responsive ── */
+        @media (max-width: 560px) {
+            .header { padding: 16px; gap: 12px; }
+            .header img { width: 44px; height: 44px; border-radius: 11px; }
+            .header-text h1 { font-size: 18px; }
+            .lang-btn, .lang-sep { font-size: 13px; }
+            .container { padding: 20px 14px 60px; }
+            .section { padding: 18px 16px; }
+            .meta-card { padding: 16px 18px; }
+            .meta-grid { grid-template-columns: 1fr; row-gap: 4px; }
+            .meta-label { margin-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <img src="/lendnote/app-icon.png" alt="Lendnote">
+    <div class="header-text">
+        <h1>Lendnote</h1>
+        <p class="subtitle" id="header-subtitle"></p>
+    </div>
+    <div class="lang-switcher">
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+    </div>
+</header>
+
+<!-- ══════════════════ ENGLISH ══════════════════ -->
+<div id="lang-en" class="lang-content">
+<div class="container">
+
+    <div class="meta-card">
+        <div class="meta-grid">
+            <span class="meta-label">App</span>
+            <span class="meta-value">Lendnote</span>
+            <span class="meta-label">Developer</span>
+            <span class="meta-value">Truong Phuong Nam</span>
+            <span class="meta-label">Contact</span>
+            <span class="meta-value"><a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></span>
+            <span class="meta-label">Effective Date</span>
+            <span class="meta-value">August 13, 2026</span>
+            <span class="meta-label">Last Updated</span>
+            <span class="meta-value">August 13, 2026</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>1. Introduction</h2>
+        <p>Lendnote ("we", "our", or "the app") is a personal finance app that helps you track money you lend to and borrow from people in your life. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Information You Provide</h3>
+        <p>All personal financial data you enter is currently stored <strong>locally on your device only</strong> and is not uploaded to any cloud service:</p>
+        <ul>
+            <li><strong>Contact information</strong>: Names and optional phone numbers of people you lend to or borrow from</li>
+            <li><strong>Transaction data</strong>: Amounts, transaction types (lend/borrow/collect/repay), dates, due dates, and personal notes</li>
+            <li><strong>Debt records</strong>: Outstanding balances, repayment status, transaction history, and an optional interest rate you record for reference</li>
+            <li><strong>Photo attachments</strong>: Photos you choose to attach to a transaction as proof. Images are compressed and saved inside the app's own storage on your device. They are selected through your operating system's photo picker, which runs outside the app, so Lendnote never gains access to the rest of your photo library.</li>
+        </ul>
+
+        <h3>2.2 Automatically Collected Information</h3>
+        <ul>
+            <li><strong>Anonymous Device ID</strong>: A randomly generated identifier stored locally on your device. This ID is used solely to authenticate requests to our AI parsing service and to enforce daily usage limits for that feature. It is never linked to your identity or financial data.</li>
+        </ul>
+
+        <h3>2.3 AI-Powered Input (Smart Add Feature)</h3>
+        <p>When you use the "Smart Add" feature to enter transactions using natural language (e.g., <em>"Lent John $50 for lunch"</em>):</p>
+        <ul>
+            <li>The text you type is sent to our secure AI parsing service to extract transaction details.</li>
+            <li>To process your text, our backend uses the Google Gemini API (a large language model service). Only the text you enter in the Smart Add field is transmitted; no financial records, contact names, or other app data are included.</li>
+            <li><strong>This text is not retained on our servers or by the AI provider after processing.</strong></li>
+            <li>Requests are authenticated using industry-standard cryptographic signatures to prevent unauthorized access.</li>
+            <li>The parsed result (amount, person name, date, type) is returned to your device and saved locally.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Third-Party Services</h2>
+        <p>Lendnote integrates the following third-party services, each with their own privacy practices:</p>
+
+        <h3>3.1 Google AdMob (Advertising)</h3>
+        <p>Lendnote displays advertisements provided by Google AdMob.</p>
+        <ul>
+            <li>AdMob may collect and use data to serve personalized ads, including device identifiers (such as IDFA on iOS), IP address, and app interaction data for ad measurement and personalization.</li>
+            <li><strong>In the European Economic Area (EEA) and United Kingdom</strong>: We use Google's User Messaging Platform (UMP) to collect your consent before serving personalized ads. You may opt out of personalized ads at any time.</li>
+            <li><strong>On iOS</strong>: We request permission via Apple's App Tracking Transparency (ATT) framework before tracking your activity for ad personalization. You may decline this permission.</li>
+            <li>If you opt out, you will still see ads, but they will not be personalized.</li>
+            <li>See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for details on how AdMob processes data.</li>
+        </ul>
+
+        <h3>3.2 Firebase Crashlytics</h3>
+        <p>Lendnote uses Firebase Crashlytics on Android and iOS to detect and report app crashes.</p>
+        <ul>
+            <li>Crash reports include anonymous technical information (stack traces, device model, OS version, app version).</li>
+            <li>Crash reports do <strong>not</strong> include your financial data, contact names, or any personally identifiable information.</li>
+            <li>See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a> for details.</li>
+        </ul>
+
+        <h3>3.3 Firebase Analytics</h3>
+        <p>Lendnote uses Firebase Analytics on Android and iOS to measure which features are actually used, so we know what to improve.</p>
+        <ul>
+            <li>We log a small, fixed set of feature events: opening and sending a reminder message, opening and sharing a receipt image, and opening and sharing a PDF statement.</li>
+            <li>Events record <strong>that</strong> a feature was used, never <strong>what</strong> it was used on. Amounts, contact names, notes, photos, and any other content of your records are <strong>not</strong> sent.</li>
+            <li>Firebase Analytics also collects standard app and device information (app version, device model, OS version, coarse region) as part of its normal operation.</li>
+            <li>See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a> for details.</li>
+        </ul>
+
+        <h3>3.4 AI Parsing Backend</h3>
+        <p>Our AI transaction parsing feature is processed through our secure backend service.</p>
+        <ul>
+            <li>Only the text you enter in the Smart Add field is transmitted.</li>
+            <li>No financial records, contact names, or other app data are sent to our backend.</li>
+            <li>All requests are encrypted in transit (HTTPS).</li>
+        </ul>
+
+        <h3>3.5 Google Gemini API (AI Processing)</h3>
+        <p>The text you enter in the Smart Add feature is processed by the Google Gemini API to extract structured transaction details.</p>
+        <ul>
+            <li>Only your Smart Add text input is sent to Google's API. No other app data is transmitted.</li>
+            <li>Google does not retain this text after processing, in accordance with their API data usage policies.</li>
+            <li>See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for details.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. How We Use Your Information</h2>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Data</th><th>Purpose</th></tr>
+                <tr>
+                    <td>Financial records (contacts, transactions, debt records)</td>
+                    <td>Core app functionality - tracking, calculating balances, displaying history</td>
+                </tr>
+                <tr>
+                    <td>Anonymous device ID</td>
+                    <td>Authenticating AI parsing requests and enforcing daily usage limits</td>
+                </tr>
+                <tr>
+                    <td>Smart Add text input</td>
+                    <td>Processing via AI to extract transaction details</td>
+                </tr>
+                <tr>
+                    <td>Photo attachments</td>
+                    <td>Showing the proof you attached to a transaction, on your device only</td>
+                </tr>
+                <tr>
+                    <td>Crash reports</td>
+                    <td>Identifying and fixing app bugs</td>
+                </tr>
+                <tr>
+                    <td>Feature events (Firebase Analytics)</td>
+                    <td>Understanding which features are used, so we know what to improve</td>
+                </tr>
+                <tr>
+                    <td>Ad data</td>
+                    <td>Serving relevant advertisements</td>
+                </tr>
+            </table>
+        </div>
+        <p>We do <strong>not</strong>:</p>
+        <ul>
+            <li>Sell your personal data to any third party</li>
+            <li>Use your financial data for advertising targeting</li>
+            <li>Share your contact names or transaction data with any third party</li>
+            <li>Store your personal financial data on any server</li>
+            <li>Upload your photo attachments anywhere</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Data Storage and Security</h2>
+        <ul>
+            <li><strong>All personal financial data</strong> (contacts, transactions, debt records) is currently stored exclusively in a local database on your device.</li>
+            <li><strong>No account or login is required</strong> - the app works entirely offline for personal data.</li>
+            <li><strong>Deleting the app</strong> permanently removes all locally stored data from your device, including photo attachments.</li>
+            <li><strong>App Lock</strong>: You can require your device's own biometric unlock (fingerprint or face) before Lendnote opens, with your device passcode as the fallback. The check is performed entirely by the operating system: Lendnote never reads or stores biometric data, and there is no separate PIN for you to set or forget.</li>
+            <li><strong>Sharing is always your choice</strong>: reminder messages, receipt images, and PDF statements are created on your device and handed to your system share sheet, where you pick the app to send them with. Lendnote does not send them anywhere on its own, and does not send text messages itself.</li>
+            <li>Data transmitted to third-party services (AI parsing, crash reporting, advertising) is protected by HTTPS encryption in transit.</li>
+            <li><strong>Future cloud sync</strong>: A future update may introduce an optional cloud backup and sync feature. If and when this feature is added, this Privacy Policy will be updated to describe how your data is stored and protected on our servers, and you will be notified before the feature becomes active. Participation will be opt-in.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Permissions We Request</h2>
+
+        <h3>Android</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Permission</th><th>Reason</th></tr>
+                <tr>
+                    <td>Internet Access</td>
+                    <td>Connect to AI parsing service and load advertisements</td>
+                </tr>
+                <tr>
+                    <td>Notifications</td>
+                    <td>Send reminders when debts are approaching their due date (requested at runtime on Android 13+)</td>
+                </tr>
+            </table>
+        </div>
+        <p>Attaching photos does <strong>not</strong> require the photo library permission: the system photo picker runs outside the app and hands over only the images you pick. Biometric unlock uses the system prompt and needs no runtime permission.</p>
+
+        <h3>iOS</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Permission</th><th>Reason</th></tr>
+                <tr>
+                    <td>Notifications</td>
+                    <td>Send reminders when debts are approaching their due date</td>
+                </tr>
+                <tr>
+                    <td>Face ID</td>
+                    <td>Unlock the app when App Lock is turned on. Only requested if you enable App Lock</td>
+                </tr>
+                <tr>
+                    <td>App Tracking Transparency (ATT)</td>
+                    <td>Required by Apple before AdMob can serve personalized ads</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>7. Your Privacy Rights</h2>
+        <p>Because all personal financial data is stored locally on your device, you have full control at all times:</p>
+        <ul>
+            <li><strong>Access</strong>: Open the app to view all your data at any time.</li>
+            <li><strong>Edit</strong>: Modify any contact, transaction, or debt record directly in the app.</li>
+            <li><strong>Delete</strong>: Delete individual records or uninstall the app to remove all data.</li>
+            <li><strong>Opt out of personalized ads</strong>: Decline ATT permission (iOS), respond to the consent dialog (EEA/UK), or adjust ad settings in your device settings.</li>
+        </ul>
+        <div class="callout">
+            <strong>California Residents (CCPA):</strong> We do not sell personal information. You have the right to know what data is collected and to request deletion. Contact us at the email below.
+        </div>
+        <div class="callout">
+            <strong>EEA/UK Residents (GDPR):</strong> You have the right to access, rectify, erase, and restrict processing of personal data. Since financial data is stored only on your device, you can exercise these rights directly within the app. For data processed by third parties (AdMob, Crashlytics, Firebase Analytics, Google Gemini), please refer to their respective policies or contact us.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. Children's Privacy</h2>
+        <p>Lendnote is not intended for children under the age of 13 (or under 16 in the EEA/UK). We do not knowingly collect personal information from children. If you believe a child has provided information through the app, please contact us so we can take appropriate action.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Data Retention</h2>
+        <ul>
+            <li><strong>Local device data</strong>: Retained until you delete it within the app or uninstall the app.</li>
+            <li><strong>AI parsing input</strong>: Not retained on our servers or by Google's Gemini API; discarded immediately after processing.</li>
+            <li><strong>Crash reports</strong>: Retained by Firebase Crashlytics per their data retention policy.</li>
+            <li><strong>Feature events</strong>: Retained by Firebase Analytics per their data retention policy.</li>
+            <li><strong>Ad data</strong>: Retained by Google AdMob per their data retention policy.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this document. We encourage you to review this policy periodically.</p>
+    </div>
+
+    <div class="section">
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact:</p>
+        <p><strong>Truong Phuong Nam</strong><br>
+        Email: <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></p>
+    </div>
+
+</div>
+<footer class="footer">
+    <p>This Privacy Policy applies to the Lendnote app on Android and iOS platforms.</p>
+    <p>&copy; 2026 Truong Phuong Nam</p>
+</footer>
+</div>
+
+<!-- ══════════════════ VIETNAMESE ══════════════════ -->
+<div id="lang-vi" class="lang-content">
+<div class="container">
+
+    <div class="meta-card">
+        <div class="meta-grid">
+            <span class="meta-label">Ứng dụng</span>
+            <span class="meta-value">Lendnote</span>
+            <span class="meta-label">Nhà phát triển</span>
+            <span class="meta-value">Trương Phương Nam</span>
+            <span class="meta-label">Liên hệ</span>
+            <span class="meta-value"><a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></span>
+            <span class="meta-label">Ngày hiệu lực</span>
+            <span class="meta-value">13 tháng 8, 2026</span>
+            <span class="meta-label">Cập nhật lần cuối</span>
+            <span class="meta-value">13 tháng 8, 2026</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>1. Giới Thiệu</h2>
+        <p>Lendnote ("chúng tôi", "ứng dụng") là ứng dụng quản lý tài chính cá nhân giúp bạn theo dõi các khoản tiền cho mượn và đi vay trong cuộc sống. Chính Sách Bảo Mật này giải thích những thông tin chúng tôi thu thập, cách chúng tôi sử dụng, và quyền của bạn đối với dữ liệu của mình.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Thông Tin Chúng Tôi Thu Thập</h2>
+
+        <h3>2.1 Thông Tin Bạn Cung Cấp</h3>
+        <p>Toàn bộ dữ liệu tài chính cá nhân bạn nhập vào hiện được lưu trữ <strong>chỉ trên thiết bị của bạn</strong> và không được tải lên bất kỳ dịch vụ đám mây nào:</p>
+        <ul>
+            <li><strong>Thông tin liên hệ</strong>: Tên và số điện thoại (tuỳ chọn) của những người bạn cho mượn hoặc vay tiền</li>
+            <li><strong>Dữ liệu giao dịch</strong>: Số tiền, loại giao dịch (cho mượn/thu hồi/đi vay/trả nợ), ngày thực hiện, ngày hẹn trả, và ghi chú cá nhân</li>
+            <li><strong>Khoản nợ</strong>: Số dư còn lại, trạng thái thanh toán, lịch sử giao dịch, và lãi suất tuỳ chọn bạn ghi lại để tham khảo</li>
+            <li><strong>Ảnh đính kèm</strong>: Ảnh bạn chọn đính vào giao dịch để làm bằng chứng. Ảnh được nén và lưu trong vùng lưu trữ riêng của ứng dụng trên thiết bị bạn. Ảnh được chọn qua bộ chọn ảnh của hệ điều hành, vốn chạy bên ngoài ứng dụng, nên Lendnote không bao giờ có quyền truy cập phần còn lại của thư viện ảnh.</li>
+        </ul>
+
+        <h3>2.2 Thông Tin Thu Thập Tự Động</h3>
+        <ul>
+            <li><strong>Mã thiết bị ẩn danh</strong>: Một mã định danh được tạo ngẫu nhiên và lưu trên thiết bị của bạn. Mã này chỉ được dùng để xác thực các yêu cầu đến dịch vụ phân tích AI và kiểm soát giới hạn sử dụng hàng ngày của tính năng đó. Mã này không bao giờ được liên kết với danh tính hay dữ liệu tài chính của bạn.</li>
+        </ul>
+
+        <h3>2.3 Nhập Liệu Bằng AI (Tính Năng Thêm Nhanh)</h3>
+        <p>Khi bạn dùng tính năng "Thêm Nhanh" để nhập giao dịch bằng ngôn ngữ tự nhiên (ví dụ: <em>"Cho Minh mượn 500k, hẹn trả cuối tháng"</em>):</p>
+        <ul>
+            <li>Đoạn văn bản bạn nhập được gửi đến dịch vụ phân tích AI bảo mật của chúng tôi để trích xuất thông tin giao dịch.</li>
+            <li>Để xử lý văn bản của bạn, hệ thống backend sử dụng Google Gemini API (dịch vụ mô hình ngôn ngữ lớn). Chỉ văn bản bạn nhập trong ô Thêm Nhanh được truyền đi; không có dữ liệu tài chính, tên liên hệ hay bất kỳ dữ liệu nào khác trong ứng dụng được gửi kèm.</li>
+            <li><strong>Văn bản này không được lưu lại trên máy chủ của chúng tôi hay bởi nhà cung cấp AI sau khi xử lý.</strong></li>
+            <li>Các yêu cầu được xác thực bằng chữ ký mật mã theo tiêu chuẩn ngành để ngăn chặn truy cập trái phép.</li>
+            <li>Kết quả phân tích (số tiền, tên người, ngày, loại giao dịch) được trả về thiết bị của bạn và lưu cục bộ.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Dịch Vụ Bên Thứ Ba</h2>
+        <p>Lendnote tích hợp các dịch vụ bên thứ ba sau, mỗi dịch vụ có chính sách bảo mật riêng:</p>
+
+        <h3>3.1 Google AdMob (Quảng Cáo)</h3>
+        <p>Lendnote hiển thị quảng cáo được cung cấp bởi Google AdMob.</p>
+        <ul>
+            <li>AdMob có thể thu thập và sử dụng dữ liệu để phục vụ quảng cáo được cá nhân hoá, bao gồm mã định danh thiết bị (như IDFA trên iOS), địa chỉ IP, và dữ liệu tương tác trong ứng dụng phục vụ mục đích đo lường và cá nhân hoá quảng cáo.</li>
+            <li><strong>Tại Khu vực Kinh tế Châu Âu (EEA) và Vương quốc Anh</strong>: Chúng tôi sử dụng Nền tảng Nhắn tin Người dùng (UMP) của Google để thu thập sự đồng ý của bạn trước khi hiển thị quảng cáo được cá nhân hoá. Bạn có thể từ chối bất kỳ lúc nào.</li>
+            <li><strong>Trên iOS</strong>: Chúng tôi yêu cầu quyền thông qua framework App Tracking Transparency (ATT) của Apple trước khi theo dõi hoạt động của bạn cho mục đích cá nhân hoá quảng cáo. Bạn có thể từ chối quyền này.</li>
+            <li>Nếu bạn từ chối, bạn vẫn sẽ thấy quảng cáo nhưng chúng sẽ không được cá nhân hoá.</li>
+            <li>Xem <a href="https://policies.google.com/privacy" target="_blank">Chính sách Bảo mật của Google</a> để biết thêm chi tiết về cách AdMob xử lý dữ liệu.</li>
+        </ul>
+
+        <h3>3.2 Firebase Crashlytics</h3>
+        <p>Lendnote sử dụng Firebase Crashlytics trên Android và iOS để phát hiện và báo cáo sự cố ứng dụng.</p>
+        <ul>
+            <li>Báo cáo sự cố bao gồm thông tin kỹ thuật ẩn danh (stack trace, model thiết bị, phiên bản hệ điều hành, phiên bản ứng dụng).</li>
+            <li>Báo cáo sự cố <strong>không</strong> bao gồm dữ liệu tài chính, tên liên hệ, hay bất kỳ thông tin nhận dạng cá nhân nào.</li>
+            <li>Xem <a href="https://firebase.google.com/support/privacy" target="_blank">Chính sách Bảo mật Firebase</a> để biết thêm chi tiết.</li>
+        </ul>
+
+        <h3>3.3 Firebase Analytics</h3>
+        <p>Lendnote sử dụng Firebase Analytics trên Android và iOS để đo xem tính năng nào thật sự được dùng, từ đó biết nên cải thiện chỗ nào.</p>
+        <ul>
+            <li>Chúng tôi ghi một tập sự kiện cố định và nhỏ: mở và gửi tin nhắc nợ, mở và chia sẻ ảnh biên nhận, mở và chia sẻ tờ sao kê PDF.</li>
+            <li>Sự kiện chỉ ghi nhận <strong>rằng</strong> một tính năng được dùng, không bao giờ ghi <strong>dùng với nội dung gì</strong>. Số tiền, tên người, ghi chú, ảnh và mọi nội dung khác trong bản ghi của bạn <strong>không</strong> được gửi đi.</li>
+            <li>Firebase Analytics cũng thu thập thông tin ứng dụng và thiết bị thông thường (phiên bản ứng dụng, model thiết bị, phiên bản hệ điều hành, khu vực ở mức thô) như một phần hoạt động mặc định của nó.</li>
+            <li>Xem <a href="https://firebase.google.com/support/privacy" target="_blank">Chính sách Bảo mật Firebase</a> để biết thêm chi tiết.</li>
+        </ul>
+
+        <h3>3.4 Dịch Vụ Phân Tích AI</h3>
+        <p>Tính năng phân tích giao dịch bằng AI được xử lý thông qua dịch vụ backend bảo mật của chúng tôi.</p>
+        <ul>
+            <li>Chỉ văn bản bạn nhập trong ô Thêm Nhanh được truyền đi.</li>
+            <li>Không có dữ liệu tài chính, tên liên hệ hay dữ liệu nào khác trong ứng dụng được gửi đến backend.</li>
+            <li>Tất cả các yêu cầu đều được mã hoá khi truyền tải (HTTPS).</li>
+        </ul>
+
+        <h3>3.5 Google Gemini API (Xử Lý AI)</h3>
+        <p>Văn bản bạn nhập trong tính năng Thêm Nhanh được xử lý bởi Google Gemini API để trích xuất thông tin giao dịch có cấu trúc.</p>
+        <ul>
+            <li>Chỉ văn bản nhập trong ô Thêm Nhanh được gửi đến API của Google. Không có dữ liệu nào khác trong ứng dụng được truyền đi.</li>
+            <li>Google không lưu giữ văn bản này sau khi xử lý, theo chính sách sử dụng dữ liệu API của họ.</li>
+            <li>Xem <a href="https://policies.google.com/privacy" target="_blank">Chính sách Bảo mật của Google</a> để biết thêm chi tiết.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Cách Chúng Tôi Sử Dụng Thông Tin</h2>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Dữ liệu</th><th>Mục đích</th></tr>
+                <tr>
+                    <td>Dữ liệu tài chính (liên hệ, giao dịch, khoản nợ)</td>
+                    <td>Chức năng cốt lõi - theo dõi, tính số dư, hiển thị lịch sử</td>
+                </tr>
+                <tr>
+                    <td>Mã thiết bị ẩn danh</td>
+                    <td>Xác thực yêu cầu phân tích AI và kiểm soát giới hạn sử dụng hàng ngày</td>
+                </tr>
+                <tr>
+                    <td>Văn bản nhập trong Thêm Nhanh</td>
+                    <td>Xử lý qua AI để trích xuất thông tin giao dịch</td>
+                </tr>
+                <tr>
+                    <td>Ảnh đính kèm</td>
+                    <td>Hiển thị bằng chứng bạn đã đính vào giao dịch, chỉ trên thiết bị của bạn</td>
+                </tr>
+                <tr>
+                    <td>Báo cáo sự cố</td>
+                    <td>Xác định và sửa lỗi ứng dụng</td>
+                </tr>
+                <tr>
+                    <td>Sự kiện tính năng (Firebase Analytics)</td>
+                    <td>Hiểu tính năng nào đang được dùng, để biết nên cải thiện chỗ nào</td>
+                </tr>
+                <tr>
+                    <td>Dữ liệu quảng cáo</td>
+                    <td>Phục vụ quảng cáo phù hợp</td>
+                </tr>
+            </table>
+        </div>
+        <p>Chúng tôi <strong>không</strong>:</p>
+        <ul>
+            <li>Bán dữ liệu cá nhân của bạn cho bất kỳ bên thứ ba nào</li>
+            <li>Sử dụng dữ liệu tài chính của bạn cho mục đích nhắm mục tiêu quảng cáo</li>
+            <li>Chia sẻ tên liên hệ hay dữ liệu giao dịch của bạn với bất kỳ bên thứ ba nào</li>
+            <li>Lưu trữ dữ liệu tài chính cá nhân của bạn trên bất kỳ máy chủ nào</li>
+            <li>Tải ảnh đính kèm của bạn lên bất kỳ đâu</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Lưu Trữ và Bảo Mật Dữ Liệu</h2>
+        <ul>
+            <li><strong>Toàn bộ dữ liệu tài chính cá nhân</strong> (liên hệ, giao dịch, khoản nợ) hiện được lưu trữ độc quyền trong cơ sở dữ liệu cục bộ trên thiết bị của bạn.</li>
+            <li><strong>Không yêu cầu tài khoản hay đăng nhập</strong> - ứng dụng hoạt động hoàn toàn ngoại tuyến cho dữ liệu cá nhân.</li>
+            <li><strong>Xoá ứng dụng</strong> sẽ xoá vĩnh viễn toàn bộ dữ liệu được lưu cục bộ trên thiết bị của bạn, bao gồm cả ảnh đính kèm.</li>
+            <li><strong>Khoá ứng dụng</strong>: Bạn có thể bắt buộc mở khoá bằng sinh trắc học của chính thiết bị (vân tay hoặc khuôn mặt) trước khi vào Lendnote, với mã khoá máy làm phương án dự phòng. Việc kiểm tra do hệ điều hành thực hiện hoàn toàn: Lendnote không bao giờ đọc hay lưu dữ liệu sinh trắc học, và không có mã PIN riêng nào để bạn phải đặt hay lo quên.</li>
+            <li><strong>Chia sẻ luôn là lựa chọn của bạn</strong>: tin nhắc nợ, ảnh biên nhận và tờ sao kê PDF đều được tạo trên thiết bị rồi chuyển sang khung chia sẻ của hệ thống, nơi bạn tự chọn ứng dụng để gửi. Lendnote không tự gửi chúng đi đâu, và cũng không tự gửi tin nhắn SMS.</li>
+            <li>Dữ liệu truyền đến các dịch vụ bên thứ ba (phân tích AI, báo cáo sự cố, quảng cáo) được bảo vệ bằng mã hoá HTTPS khi truyền tải.</li>
+            <li><strong>Đồng bộ đám mây trong tương lai</strong>: Một bản cập nhật trong tương lai có thể giới thiệu tính năng sao lưu và đồng bộ đám mây tuỳ chọn. Nếu tính năng này được thêm vào, Chính Sách Bảo Mật này sẽ được cập nhật để mô tả cách dữ liệu của bạn được lưu trữ và bảo vệ trên máy chủ của chúng tôi, và bạn sẽ được thông báo trước khi tính năng có hiệu lực. Việc tham gia sẽ là tuỳ chọn.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Quyền Truy Cập Chúng Tôi Yêu Cầu</h2>
+
+        <h3>Android</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Quyền</th><th>Lý do</th></tr>
+                <tr>
+                    <td>Truy cập Internet</td>
+                    <td>Kết nối đến dịch vụ phân tích AI và tải quảng cáo</td>
+                </tr>
+                <tr>
+                    <td>Thông báo</td>
+                    <td>Gửi nhắc nhở khi khoản nợ sắp đến hạn (yêu cầu cấp quyền khi chạy trên Android 13+)</td>
+                </tr>
+            </table>
+        </div>
+        <p>Việc đính kèm ảnh <strong>không</strong> cần quyền thư viện ảnh: bộ chọn ảnh của hệ thống chạy bên ngoài ứng dụng và chỉ trao lại đúng những ảnh bạn chọn. Mở khoá bằng sinh trắc học dùng hộp thoại của hệ thống nên cũng không cần quyền nào khi chạy.</p>
+
+        <h3>iOS</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Quyền</th><th>Lý do</th></tr>
+                <tr>
+                    <td>Thông báo</td>
+                    <td>Gửi nhắc nhở khi khoản nợ sắp đến hạn</td>
+                </tr>
+                <tr>
+                    <td>Face ID</td>
+                    <td>Mở khoá ứng dụng khi bạn bật Khoá ứng dụng. Chỉ được yêu cầu nếu bạn bật tính năng này</td>
+                </tr>
+                <tr>
+                    <td>App Tracking Transparency (ATT)</td>
+                    <td>Bắt buộc theo yêu cầu của Apple trước khi AdMob có thể phục vụ quảng cáo được cá nhân hoá</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>7. Quyền Bảo Mật Của Bạn</h2>
+        <p>Vì toàn bộ dữ liệu tài chính cá nhân được lưu trữ cục bộ trên thiết bị của bạn, bạn có toàn quyền kiểm soát mọi lúc:</p>
+        <ul>
+            <li><strong>Truy cập</strong>: Mở ứng dụng để xem toàn bộ dữ liệu của bạn bất kỳ lúc nào.</li>
+            <li><strong>Chỉnh sửa</strong>: Sửa đổi bất kỳ liên hệ, giao dịch hay khoản nợ nào trực tiếp trong ứng dụng.</li>
+            <li><strong>Xoá</strong>: Xoá từng bản ghi riêng lẻ hoặc gỡ cài đặt ứng dụng để xoá toàn bộ dữ liệu.</li>
+            <li><strong>Từ chối quảng cáo được cá nhân hoá</strong>: Từ chối quyền ATT (iOS), phản hồi hộp thoại đồng ý (EEA/Vương quốc Anh), hoặc điều chỉnh cài đặt quảng cáo trong cài đặt thiết bị của bạn.</li>
+        </ul>
+        <div class="callout">
+            <strong>Cư dân California (CCPA):</strong> Chúng tôi không bán thông tin cá nhân. Bạn có quyền biết dữ liệu nào được thu thập và yêu cầu xoá dữ liệu. Vui lòng liên hệ chúng tôi theo địa chỉ email bên dưới.
+        </div>
+        <div class="callout">
+            <strong>Cư dân EEA/Vương quốc Anh (GDPR):</strong> Bạn có quyền truy cập, chỉnh sửa, xoá và hạn chế xử lý dữ liệu cá nhân. Vì dữ liệu tài chính chỉ được lưu trên thiết bị của bạn, bạn có thể thực hiện các quyền này trực tiếp trong ứng dụng. Đối với dữ liệu được xử lý bởi bên thứ ba (AdMob, Crashlytics, Firebase Analytics, Google Gemini), vui lòng tham khảo chính sách tương ứng của họ hoặc liên hệ chúng tôi.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. Quyền Riêng Tư Của Trẻ Em</h2>
+        <p>Lendnote không dành cho trẻ em dưới 13 tuổi (hoặc dưới 16 tuổi tại EEA/Vương quốc Anh). Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn cho rằng một trẻ em đã cung cấp thông tin qua ứng dụng, vui lòng liên hệ chúng tôi để có thể thực hiện các biện pháp phù hợp.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Thời Gian Lưu Trữ Dữ Liệu</h2>
+        <ul>
+            <li><strong>Dữ liệu cục bộ trên thiết bị</strong>: Được lưu giữ cho đến khi bạn xoá trong ứng dụng hoặc gỡ cài đặt ứng dụng.</li>
+            <li><strong>Văn bản nhập trong Thêm Nhanh</strong>: Không được lưu giữ trên máy chủ của chúng tôi hay bởi Google Gemini API; bị xoá ngay sau khi xử lý.</li>
+            <li><strong>Báo cáo sự cố</strong>: Được lưu giữ bởi Firebase Crashlytics theo chính sách lưu trữ dữ liệu của họ.</li>
+            <li><strong>Sự kiện tính năng</strong>: Được lưu giữ bởi Firebase Analytics theo chính sách lưu trữ dữ liệu của họ.</li>
+            <li><strong>Dữ liệu quảng cáo</strong>: Được lưu giữ bởi Google AdMob theo chính sách lưu trữ dữ liệu của họ.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>10. Thay Đổi Chính Sách Bảo Mật</h2>
+        <p>Chúng tôi có thể cập nhật Chính Sách Bảo Mật này theo thời gian. Khi có thay đổi, chúng tôi sẽ cập nhật ngày "Cập nhật lần cuối" ở đầu tài liệu này. Chúng tôi khuyến khích bạn xem lại chính sách này định kỳ.</p>
+    </div>
+
+    <div class="section">
+        <h2>11. Liên Hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi, thắc mắc hay yêu cầu nào liên quan đến Chính Sách Bảo Mật này hoặc dữ liệu của bạn, vui lòng liên hệ:</p>
+        <p><strong>Trương Phương Nam</strong><br>
+        Email: <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></p>
+    </div>
+
+</div>
+<footer class="footer">
+    <p>Chính Sách Bảo Mật này áp dụng cho ứng dụng Lendnote trên nền tảng Android và iOS.</p>
+    <p>&copy; 2026 Trương Phương Nam</p>
+</footer>
+</div>
+
+<script>
+    var subtitles = { en: 'Privacy Policy', vi: 'Chính Sách Bảo Mật' };
+
+    function setLang(lang) {
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-vi').classList.toggle('active', lang === 'vi');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+        document.getElementById('header-subtitle').textContent = subtitles[lang];
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('lendnote-lang', lang); } catch(e) {}
+        window.scrollTo(0, 0);
+    }
+
+    (function () {
+        var saved = '';
+        try { saved = localStorage.getItem('lendnote-lang') || ''; } catch(e) {}
+        var lang = saved || (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('vi') ? 'vi' : 'en';
+        // re-check: if saved is empty, use navigator result
+        if (!saved) {
+            lang = (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('vi') ? 'vi' : 'en';
+        }
+        setLang(lang);
+    })();
+</script>
+
+</body>
+</html>

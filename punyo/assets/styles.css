@@ -1,0 +1,280 @@
+/* Punyo — web. Token màu/shape/spacing bám docs/ui.md của repo app (private).
+   Không sửa hex rời ở đây: đổi màu thì đổi ở ui.md trước, rồi chép token xuống. */
+
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  src: url('fonts/bevietnampro_regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  src: url('fonts/bevietnampro_bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ui.md §1.3 — light: surface xám ấm (neutral H70 C2.5), container SÁNG hơn surface
+   (ngược M3 mặc định) để card nổi lên khỏi nền. */
+:root {
+  --surface: #F4ECE7;                /* n94 */
+  --surface-container-low: #FAF2ED;  /* n96 */
+  --surface-container: #FFF8F4;      /* n98 */
+  --surface-container-high: #FFFBFF; /* n99 */
+  --on-surface: #1E1B18;             /* n10 */
+  --on-surface-variant: #4A4643;     /* n30 */
+  --primary: #556254;                /* t40 — chữ primary PHẢI là tone 40, xem ui.md §1.4 */
+  --primary-container: #D8E7D4;
+  --on-primary-container: #3D4A3D;
+  --secondary-container: #F4DFCB;
+  --on-secondary-container: #524436;
+  --outline-variant: #CCC5C0;        /* n80 — chỉ dùng làm viền, không làm chữ */
+
+  --radius-xl: 28px;   /* ui.md §3 extraLarge — container lớn */
+  --radius-card: 24px; /* ui.md §3 large */
+  --radius-btn: 16px;  /* ui.md §3 medium */
+  --gutter: 24px;
+  --measure: 720px;    /* ui.md §4: màn rộng thì CHẶN bề rộng + canh giữa, không kéo giãn */
+  --measure-wide: 1000px; /* riêng lưới card — ui.md §4 cho lưới rộng hơn màn một-tiêu-điểm */
+}
+
+/* ui.md §1.3 — dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #161310;
+    --surface-container-low: #1E1B18;
+    --surface-container: #221F1C;
+    --surface-container-high: #2D2926;
+    --on-surface: #E9E1DC;
+    --on-surface-variant: #CCC5C0;
+    --primary: #BCCBB9;
+    --primary-container: #3D4A3D;
+    --on-primary-container: #D8E7D4;
+    --secondary-container: #524436;
+    --on-secondary-container: #F4DFCB;
+    --outline-variant: #4A4643;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 var(--gutter);
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3 { font-weight: 700; line-height: 1.25; margin: 0 0 12px; }
+h1 { font-size: clamp(32px, 6.5vw, 48px); letter-spacing: -0.025em; }
+h2 { font-size: clamp(22px, 3.6vw, 28px); letter-spacing: -0.015em; }
+h3 { font-size: 17px; }
+p, ul { margin: 0 0 16px; }
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+strong { font-weight: 700; }
+em { font-style: normal; color: var(--primary); font-weight: 700; }
+
+a { color: var(--primary); text-underline-offset: 3px; }
+a:hover { text-decoration: none; }
+
+/* Trang chữ dài (privacy, support). */
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+.page h2 { margin-top: 40px; }
+.page h3 { margin-top: 28px; }
+
+/* --- Header ------------------------------------------------------------ */
+
+.topbar {
+  max-width: var(--measure-wide);
+  margin: 0 auto;
+  padding: 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.topbar__home {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; color: var(--on-surface); text-decoration: none;
+}
+.topbar__home img { width: 28px; height: 28px; border-radius: 50%; }
+
+.langswitch { display: inline-flex; gap: 4px; }
+.langswitch button {
+  font: inherit; font-size: 14px; font-weight: 700;
+  padding: 6px 14px;
+  border: 1px solid var(--outline-variant);
+  border-radius: 999px;                 /* ui.md §3 full — nút phụ dạng pill */
+  background: transparent;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+}
+.langswitch button[aria-pressed="true"] {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border-color: transparent;
+}
+
+/* --- Hero -------------------------------------------------------------- */
+
+.hero { padding: 8px 0 16px; }
+/* Không đóng khung: hero nằm thẳng trên --surface. .hero__inner còn lại đúng một
+   việc là chặn bề rộng đọc + canh giữa (ui.md §4). */
+.hero__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 48px 0 40px;
+  text-align: center;
+}
+/* Motif "tròn trong vuông" (ui.md §0). */
+.hero__icon {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  display: block; margin: 0 auto 28px;
+}
+.hero__tagline {
+  font-size: clamp(17px, 2.4vw, 20px);
+  color: var(--on-surface-variant);
+  max-width: 30em; margin: 0 auto 36px;
+}
+
+/* --- Badge store ------------------------------------------------------- */
+
+/* Asset gốc của Google/Apple, KHÔNG được sửa (bo góc, đổi màu, phủ mờ đều là vi
+   phạm brand guideline) ⟹ chỉ đặt cỡ. Hai badge lệch tỉ lệ nhau vì badge Play đã
+   có sẵn vùng đệm trong file, Apple thì không — nên chiều cao img khác nhau mới
+   ra hai nút TRÔNG bằng nhau. */
+.badges {
+  display: flex; flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center; justify-content: center;
+}
+.badge { display: inline-flex; align-items: center; }
+.badge img { display: block; }
+/* Nút Play chỉ chiếm ~78% chiều cao file (còn lại là vùng đệm) ⟹ 64 × 0.78 ≈ 50,
+   bằng đúng badge Apple. Để cả hai cùng 64 thì Play trông to hơn hẳn. */
+.badge > img[src*="play"] { height: 64px; }
+.badge > img[src*="appstore"] { height: 50px; }
+
+/* --- Band chữ ---------------------------------------------------------- */
+
+.band { padding: 40px 0 8px; }
+.band__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 4px;
+}
+
+/* --- Ảnh màn hình ------------------------------------------------------ */
+
+.shots { padding: 48px 0 8px; max-width: var(--measure); margin: 0 auto; }
+.shots__title { text-align: center; margin-bottom: 32px; }
+/* So le (zigzag): mỗi ảnh một dòng, ảnh một bên - caption bên kia, dòng chẵn đảo bên. */
+.shots__list { display: flex; flex-direction: column; gap: 48px; }
+.shot { display: flex; align-items: center; gap: 32px; margin: 0; }
+.shot:nth-child(even) { flex-direction: row-reverse; }
+.shot img {
+  width: 220px; flex: 0 0 auto; height: auto; display: block;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--outline-variant);
+}
+/* Caption nhấn mạnh: to & đậm, không mờ như body. */
+.shot figcaption {
+  flex: 1;
+  text-align: center;
+  font-size: clamp(20px, 2.6vw, 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--on-surface);
+}
+/* Hẹp: stack ảnh trên - caption dưới, canh giữa. */
+@media (max-width: 560px) {
+  .shot, .shot:nth-child(even) { flex-direction: column; }
+}
+
+/* --- Tính năng --------------------------------------------------------- */
+
+.features {
+  max-width: var(--measure-wide);
+  margin: 0 auto;
+  padding: 56px 0 16px;
+}
+.features > h2 { text-align: center; margin-bottom: 28px; }
+
+/* Ánh xạ ý của ui.md §5.1: lưới TỰ CO theo bề rộng, không cột cứng. */
+.grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card {
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+.card h3 { margin-top: 0; color: var(--primary); }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+/* Trang chữ dài (support): card xếp CHỒNG, không có .grid gap → tự giãn cách nhau. */
+.page .card { margin-bottom: 16px; }
+
+/* Câu miễn trừ cuối description — bắt buộc ở mọi bản copy (listing.md §2). */
+.disclaimer {
+  margin: 40px auto 0;
+  max-width: var(--measure);
+  padding: 20px 24px;
+  border-radius: var(--radius-card);
+  background: var(--surface-container-high);
+  border: 1px solid var(--outline-variant);
+  color: var(--on-surface-variant);
+  font-size: 15px;
+}
+.page .disclaimer { margin-top: 24px; margin-bottom: 16px; }
+
+/* Caveat pháp lý cuối description (index): BẮT BUỘC hiện (listing.md §2) nhưng là
+   fine-print, không phải điểm bán ⟹ để phẳng, không đóng box/nền như .disclaimer. */
+.fineprint {
+  margin: 32px auto 0;
+  max-width: var(--measure);
+  text-align: center;
+  color: var(--on-surface-variant);
+  font-size: 14px;
+}
+
+/* --- Bảng (privacy §3) ------------------------------------------------- */
+
+.table-wrap { overflow-x: auto; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--outline-variant); }
+th { font-weight: 700; }
+
+/* --- Footer ------------------------------------------------------------ */
+
+.footer {
+  max-width: var(--measure-wide);
+  margin: 56px auto 0;
+  padding: 32px 0 48px;
+  border-top: 1px solid var(--outline-variant);
+  color: var(--on-surface-variant);
+  font-size: 14px;
+  display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center;
+}
+.footer a { color: var(--on-surface-variant); }
+
+/* --- Chuyển ngữ -------------------------------------------------------- */
+
+/* Cả hai bản nằm sẵn trong HTML; JS chỉ bật/tắt. Không JS ⟹ hiện cả hai,
+   vẫn đọc được — trang bắt buộc của store thì không được phụ thuộc script.
+   :not([lang="sa"]) — puṇya là tiếng Phạn nằm GIỮA câu, không phải một bản dịch
+   để ẩn đi; thiếu chỗ này thì nó biến mất khỏi cả hai bản. */
+html[data-lang="vi"] [lang="en"]:not([lang="sa"]),
+html[data-lang="en"] [lang="vi"]:not([lang="sa"]) { display: none; }

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nanoko Studio - Little apps for everyday things</title>
+<meta name="description" content="Nanoko Studio is an independent studio making mobile apps for iOS and Android: Lendnote, Purrch Up!, Lotingo, Fincal, Limno and Punyo.">
+<link rel="canonical" href="https://nanoko.app/">
+<link rel="alternate" hreflang="en" href="https://nanoko.app/">
+<link rel="alternate" hreflang="vi" href="https://nanoko.app/vi/">
+<link rel="alternate" hreflang="x-default" href="https://nanoko.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nanoko Studio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:title" content="Nanoko Studio - Little apps for everyday things">
+<meta property="og:description" content="Nanoko Studio is an independent studio making mobile apps for iOS and Android: Lendnote, Purrch Up!, Lotingo, Fincal, Limno and Punyo.">
+<meta property="og:url" content="https://nanoko.app/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#fbf8f3">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/studio.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://nanoko.app/#org", "name": "Nanoko Studio", "url": "https://nanoko.app/", "email": "phuongnamtruong.it@gmail.com", "founder": {"@type": "Person", "name": "Truong Phuong Nam"}}, {"@type": "WebSite", "name": "Nanoko Studio", "url": "https://nanoko.app/", "inLanguage": "en", "description": "Nanoko Studio is an independent studio making mobile apps for iOS and Android: Lendnote, Purrch Up!, Lotingo, Fincal, Limno and Punyo.", "publisher": {"@id": "https://nanoko.app/#org"}}, {"@type": "ItemList", "name": "Apps by Nanoko", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://nanoko.app/lendnote/", "name": "Lendnote"}, {"@type": "ListItem", "position": 2, "url": "https://nanoko.app/purrchup/", "name": "Purrch Up!"}, {"@type": "ListItem", "position": 3, "url": "https://nanoko.app/lotingo/", "name": "Lotingo"}, {"@type": "ListItem", "position": 4, "url": "https://nanoko.app/fincal/", "name": "Fincal"}, {"@type": "ListItem", "position": 5, "url": "https://nanoko.app/limno/", "name": "Limno"}, {"@type": "ListItem", "position": 6, "url": "https://nanoko.app/punyo/", "name": "Punyo"}]}]}</script>
+<script>
+try {
+  var chosen = localStorage.getItem("nanoko-lang");
+  var langs = navigator.languages || [navigator.language || ""];
+  if (chosen === "vi" || (!chosen && /^vi\b/i.test(langs[0] || ""))) location.replace("/vi/" + location.search + location.hash);
+} catch (e) {}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#e2725b"/><path d="M22 46V29c0-6 4-10 10-10s10 4 10 10v17" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Nanoko Studio</span></a>
+<a class="lang" href="/vi/" hreflang="vi" lang="vi" aria-label="Tiếng Việt" data-lang="vi">VI</a>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<h1>Little apps for everyday things.</h1>
+<p>Nanoko Studio is an independent studio making mobile apps for iOS and Android. Respectful of your privacy, simple and useful.</p>
+</div></section>
+<section class="apps" aria-labelledby="apps-title"><div class="wrap">
+<h2 id="apps-title">Apps by Nanoko</h2>
+<ul class="grid">
+<li><a class="card" href="/lendnote/"><img src="/lendnote/app-icon.png" alt="" width="60" height="60" loading="lazy"><span><h3>Lendnote</h3><p>Smart debt tracker. Know who owes you and what you owe.</p></span></a></li>
+<li><a class="card" href="/purrchup/"><img src="/purrchup/icon.png" alt="" width="60" height="60" loading="lazy"><span><h3>Purrch Up!</h3><p>The endless cat climbing game. Swipe to jump, dodge bees, dress up your cat.</p></span></a></li>
+<li><a class="card" href="/lotingo/"><img src="/lotingo/app-icon.png" alt="" width="60" height="60" loading="lazy"><span><h3>Lotingo</h3><p>Bingo caller and cards on your phone, plus Tambola. No money involved.</p></span></a></li>
+<li><a class="card" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="60" height="60" loading="lazy"><span><h3>Fincal</h3><p>Loan and compound interest calculator with clear charts. Offline and private.</p></span></a></li>
+<li><a class="card" href="/limno/"><img src="/limno/assets/icon-192.png" alt="" width="60" height="60" loading="lazy"><span><h3>Limno</h3><p>Freshwater aquarium manager: water tests, alerts, nitrogen cycle, species guide.</p></span></a></li>
+<li><a class="card" href="/punyo/"><img src="/punyo/assets/icon.png" alt="" width="60" height="60" loading="lazy"><span><h3>Punyo</h3><p>A calm corner of your day: wooden fish, good deeds, incense, vegetarian days.</p></span></a></li>
+</ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<span>© 2026 Nanoko Studio · Truong Phuong Nam</span>
+<span>Contact: <a href="mailto:phuongnamtruong.it@gmail.com">phuongnamtruong.it@gmail.com</a></span>
+</div></footer>
+<script>
+document.querySelector(".lang").addEventListener("click", function (e) {
+  try { localStorage.setItem("nanoko-lang", e.currentTarget.getAttribute("data-lang")); } catch (err) {}
+});
+</script>
+</body>
+</html>
