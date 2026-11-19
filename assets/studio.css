@@ -1,22 +1,22 @@
 :root {
-  --bg: #fbf8f3;
-  --surface: #ffffff;
-  --text: #1f1d1a;
-  --muted: #6b665e;
-  --line: #ebe5da;
-  --accent: #e2725b;
-  --accent-ink: #b4513c;
-  --shadow: 0 1px 2px rgba(31, 29, 26, .04), 0 8px 24px rgba(31, 29, 26, .06);
+  /* Nanoko brand tokens (nanoko-brand/colors/nanoko-colors.css) */
+  --bg: #F2F2F5;
+  --surface: #FFFFFF;
+  --text: #17171F;
+  --muted: #6B6B78;
+  --line: #E3E3E9;
+  --accent: #FF6B3D;
+  --accent-ink: #C2410C;
+  --shadow: 0 1px 2px rgba(23, 23, 31, .04), 0 8px 24px rgba(23, 23, 31, .06);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #151412;
-    --surface: #1f1d1a;
-    --text: #f3efe8;
-    --muted: #a59f95;
-    --line: #2f2c27;
-    --accent: #f0907a;
-    --accent-ink: #f0907a;
+    --bg: #17171F;
+    --surface: #22222C;
+    --text: #FFFFFF;
+    --muted: #A0A0AE;
+    --line: #2E2E3A;
+    --accent-ink: #FF8A63;
     --shadow: none;
   }
 }
@@ -34,12 +34,12 @@ a { color: var(--accent-ink); }
 .top { padding: 20px 0; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
-.brand svg { width: 32px; height: 32px; flex: none; }
+.brand img { display: block; height: 26px; width: auto; }
 .lang { font-size: 14px; font-weight: 600; text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); }
 .lang:hover { border-color: var(--accent); }
 
 .hero { padding: 40px 0 28px; }
-.hero h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 14px; max-width: 18ch; }
+.hero h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 14px; max-width: 22ch; text-wrap: balance; }
 .hero p { color: var(--muted); font-size: 18px; margin: 0; max-width: 56ch; }
 
 .apps { padding: 12px 0 48px; }
