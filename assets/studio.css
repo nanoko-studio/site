@@ -26,10 +26,17 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 a { color: var(--accent-ink); }
-.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+main { flex: 1 0 auto; }
+/* Header and footer span the window; only the content column is centered. */
+.top .wrap, .foot .wrap { max-width: none; padding: 0 clamp(16px, 4vw, 48px); }
 
 .top { padding: 20px 0; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
