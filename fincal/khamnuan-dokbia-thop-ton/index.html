@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คำนวณดอกเบี้ยทบต้น ออมรายเดือน ดูเงินเติบโตรายปี | Fincal</title>
+<meta name="description" content="เครื่องคำนวณดอกเบี้ยทบต้นฟรี: ใส่เงินต้น เงินออมรายเดือน อัตราดอกเบี้ย และจำนวนปี เพื่อดูมูลค่าในอนาคต ดอกเบี้ยรวม กราฟการเติบโต และรายละเอียดรายปี">
+<link rel="canonical" href="https://nanoko.app/fincal/khamnuan-dokbia-thop-ton/">
+<link rel="alternate" hreflang="en" href="https://nanoko.app/fincal/compound-interest-calculator/">
+<link rel="alternate" hreflang="vi" href="https://nanoko.app/fincal/tinh-lai-kep/">
+<link rel="alternate" hreflang="id" href="https://nanoko.app/fincal/kalkulator-bunga-majemuk/">
+<link rel="alternate" hreflang="th" href="https://nanoko.app/fincal/khamnuan-dokbia-thop-ton/">
+<link rel="alternate" hreflang="pt-BR" href="https://nanoko.app/fincal/calculadora-de-juros-compostos/">
+<link rel="alternate" hreflang="ms" href="https://nanoko.app/fincal/kalkulator-faedah-kompaun/">
+<link rel="alternate" hreflang="x-default" href="https://nanoko.app/fincal/compound-interest-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fincal">
+<meta property="og:locale" content="th_TH">
+<meta property="og:title" content="คำนวณดอกเบี้ยทบต้น ออมรายเดือน ดูเงินเติบโตรายปี | Fincal">
+<meta property="og:description" content="เครื่องคำนวณดอกเบี้ยทบต้นฟรี: ใส่เงินต้น เงินออมรายเดือน อัตราดอกเบี้ย และจำนวนปี เพื่อดูมูลค่าในอนาคต ดอกเบี้ยรวม กราฟการเติบโต และรายละเอียดรายปี">
+<meta property="og:url" content="https://nanoko.app/fincal/khamnuan-dokbia-thop-ton/">
+<meta property="og:image" content="https://nanoko.app/fincal/ic_launcher-playstore.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f6f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6783214662">
+<link rel="icon" type="image/png" href="/fincal/ic_launcher-playstore.png">
+<link rel="stylesheet" href="/fincal/calc/calc.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "คำนวณดอกเบี้ยทบต้น - Fincal", "url": "https://nanoko.app/fincal/khamnuan-dokbia-thop-ton/", "inLanguage": "th", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "description": "เครื่องคำนวณดอกเบี้ยทบต้นฟรี: ใส่เงินต้น เงินออมรายเดือน อัตราดอกเบี้ย และจำนวนปี เพื่อดูมูลค่าในอนาคต ดอกเบี้ยรวม กราฟการเติบโต และรายละเอียดรายปี", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Nanoko Studio", "url": "https://nanoko.app/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Nanoko Studio", "item": "https://nanoko.app/"}, {"@type": "ListItem", "position": 2, "name": "Fincal", "item": "https://nanoko.app/fincal/"}, {"@type": "ListItem", "position": 3, "name": "ดอกเบี้ยทบต้น", "item": "https://nanoko.app/fincal/khamnuan-dokbia-thop-ton/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ดอกเบี้ยเชิงเดียวกับดอกเบี้ยทบต้นต่างกันอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ดอกเบี้ยเชิงเดียวคิดจากเงินที่คุณฝากเท่านั้น ส่วนดอกเบี้ยทบต้นคิดจากดอกเบี้ยที่ได้รับแล้วด้วย ยอดเงินจึงโตเร็วขึ้นทุกปี"}}, {"@type": "Question", "name": "เงินฝากประจำเป็นดอกเบี้ยทบต้นไหม", "acceptedAnswer": {"@type": "Answer", "text": "ใช่ ถ้าฝากต่ออัตโนมัติพร้อมดอกเบี้ยเมื่อครบกำหนด รอบทบต้นเท่ากับระยะฝาก เช่น ฝากประจำ 3 เดือนให้เลือกทบต้นรายไตรมาส"}}, {"@type": "Question", "name": "ดอกเบี้ยต่อปีถูกแบ่งต่องวดอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "นำดอกเบี้ยต่อปีหารด้วยจำนวนรอบทบต้น เช่น 5% ต่อปีทบต้นรายเดือนคือ 5% ÷ 12 ต่อเดือน ซึ่งเป็นอัตราดอกเบี้ยที่ตราไว้ที่ธนาคารและเครื่องคำนวณส่วนใหญ่ใช้"}}, {"@type": "Question", "name": "ใช้กับกองทุนหรือหุ้นได้ไหม", "acceptedAnswer": {"@type": "Answer", "text": "ได้ในฐานะการประมาณการ ใส่ผลตอบแทนเฉลี่ยต่อปีที่คาดไว้ ผลตอบแทนจริงขึ้นลงทุกปี จึงควรมองผลลัพธ์เป็นการคาดการณ์ ไม่ใช่การรับประกัน"}}, {"@type": "Question", "name": "ข้อมูลที่กรอกถูกส่งไปที่ไหนไหม", "acceptedAnswer": {"@type": "Answer", "text": "ไม่ การคำนวณทั้งหมดทำในเบราว์เซอร์ของคุณ ตัวเลขจะอยู่แค่ในที่อยู่ของหน้าเพื่อให้คุณแชร์ผลลัพธ์ได้"}}]}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+<a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="32" height="32">Fincal</a>
+<span class="spacer"></span>
+<details class="langs"><summary aria-label="ไทย">TH</summary><nav class="langmenu"><a href="/fincal/compound-interest-calculator/" hreflang="en" lang="en">English</a><a href="/fincal/tinh-lai-kep/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/fincal/kalkulator-bunga-majemuk/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/fincal/khamnuan-dokbia-thop-ton/" hreflang="th" lang="th" aria-current="true">ไทย</a><a href="/fincal/calculadora-de-juros-compostos/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="/fincal/kalkulator-faedah-kompaun/" hreflang="ms" lang="ms">Bahasa Melayu</a></nav></details>
+</div></header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Nanoko Studio</a> › <a href="/fincal/">Fincal</a> › <span>ดอกเบี้ยทบต้น</span></nav>
+<h1>คำนวณดอกเบี้ยทบต้น</h1>
+<p class="intro">ดูว่าเงินต้นและเงินที่ออมเพิ่มเป็นประจำจะเติบโตเท่าไรด้วยดอกเบี้ยทบต้น คำนวณในเบราว์เซอร์ของคุณ ไม่มีการเก็บหรือส่งข้อมูลไปที่ใด</p>
+
+<div class="calc" data-compound-calc>
+<form class="card inputs" onsubmit="return false" autocomplete="off">
+  <div class="field">
+    <label for="initial">เงินลงทุนเริ่มต้น</label>
+    <div class="box"><input id="initial" inputmode="numeric" value="100,000" aria-describedby="initial-words"><span class="unit">฿</span></div>
+    <p class="hint" id="initial-words" aria-live="polite"></p>
+    <div class="chips"><button type="button" data-amount="10000">1 หมื่น</button><button type="button" data-amount="100000">1 แสน</button><button type="button" data-amount="500000">5 แสน</button><button type="button" data-amount="1000000">1 ล้าน</button></div>
+  </div>
+  <div class="field">
+    <label for="contrib">เงินสมทบประจำ</label>
+    <div class="box pair"><input id="contrib" inputmode="numeric" value="5,000" aria-describedby="contrib-words"><span class="unit">฿</span>
+      <select id="cfreq" aria-label="เงินสมทบประจำ"><option value="m" selected>ต่อเดือน</option><option value="q">ต่อไตรมาส</option><option value="y">ต่อปี</option></select></div>
+    <p class="hint" id="contrib-words" aria-live="polite"></p>
+  </div>
+  <div class="field">
+    <label for="rate">อัตราดอกเบี้ยต่อปี</label>
+    <div class="box"><input id="rate" inputmode="decimal" value="5"><span class="unit">% ต่อปี</span></div>
+    <input id="rate-range" type="range" min="0" max="20" step="0.1" value="5" aria-label="อัตราดอกเบี้ยต่อปี">
+  </div>
+  <div class="field">
+    <label for="years">ระยะเวลา</label>
+    <div class="box"><input id="years" inputmode="numeric" value="20"><span class="unit">ปี</span></div>
+    <input id="years-range" type="range" min="1" max="50" step="1" value="20" aria-label="ระยะเวลา">
+  </div>
+  <details class="field adv" id="adv">
+    <summary>ตัวเลือกขั้นสูง</summary>
+    <div class="field">
+      <label for="kfreq">ความถี่ทบต้น</label>
+      <div class="box"><select id="kfreq" style="flex:1"><option value="m" selected>รายเดือน</option><option value="q">รายไตรมาส</option><option value="y">รายปี</option></select></div>
+    </div>
+    <fieldset class="field" style="border:0;padding:0;margin:0">
+      <legend class="label" style="font-size:14px;font-weight:600;margin:0 0 6px;padding:0">ช่วงเวลาสมทบ</legend>
+      <div class="seg row"><label><input type="radio" name="timing" value="end" checked><span><b>สิ้นงวด</b></span></label><label><input type="radio" name="timing" value="begin"><span><b>ต้นงวด</b></span></label></div>
+    </fieldset>
+  </details>
+</form>
+
+<a class="mini off" id="mini" href="#results" aria-hidden="true" tabindex="-1"><span id="mini-label"></span><b id="mini-val"></b><i>↓</i></a>
+<div class="results" id="results" aria-live="polite">
+  <section class="card">
+    <div class="err" id="res-err" hidden></div>
+    <div class="headline">
+      <div class="main"><div class="label" id="res-fv-label"></div><div class="big" id="res-fv">-</div><div class="sub" id="res-fv-sub"></div></div>
+      <div class="stat"><div class="label">เงินที่ลงไปทั้งหมด</div><b id="res-put">-</b></div>
+      <div class="stat"><div class="label">ดอกเบี้ยรวม</div><b id="res-interest">-</b></div>
+    </div>
+    <div class="split">
+      <div class="bar" role="img" aria-label="เงินเริ่มต้น / เงินสมทบ / ดอกเบี้ย"><span class="p" id="split-p"></span><span class="c" id="split-c"></span><span class="i" style="flex:1"></span></div>
+      <div class="legend"><span id="lg-p"><i class="sw sw-p"></i>เงินเริ่มต้น <b id="res-initial"></b> · <span id="pct-p"></span></span><span id="lg-c"><i class="sw sw-c"></i>เงินสมทบ <b id="res-contrib"></b> · <span id="pct-c"></span></span><span><i class="sw sw-i"></i>ดอกเบี้ย <b id="res-int2"></b> · <span id="pct-i"></span></span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>การเติบโตตามเวลา</h2>
+    <p class="note">แต่ละแท่งคือยอดเงินสิ้นปี แตะที่แท่งเพื่อดูรายละเอียด</p>
+    <div class="legend" style="margin:0 0 8px"><span><i class="sw sw-p"></i>เงินเริ่มต้น</span><span><i class="sw sw-c"></i>เงินสมทบ</span><span><i class="sw sw-i"></i>ดอกเบี้ย</span></div>
+    <div class="chartbox"><svg id="chart" role="img" aria-label="การเติบโตตามเวลา" viewBox="0 0 640 260"></svg><div class="tip" id="chart-tip" hidden></div></div>
+  </section>
+
+  <section class="card">
+    <h2>ทบต้นรายเดือน รายไตรมาส หรือรายปี?</h2>
+    <p class="note">จำนวนเงิน ดอกเบี้ย และระยะเวลาเท่ากัน แตะที่แถวเพื่อเลือก</p>
+    <div class="cmpwrap"><table class="cmp"><thead><tr><th scope="col">ทบต้น</th><th scope="col">มูลค่าสุดท้าย</th><th scope="col">ดอกเบี้ยรวม</th></tr></thead>
+    <tbody><tr id="cmprow-m" data-pick="m"><td>รายเดือน</td><td id="cmp-m">-</td><td id="cmp-m-i">-</td></tr><tr id="cmprow-q" data-pick="q"><td>รายไตรมาส</td><td id="cmp-q">-</td><td id="cmp-q-i">-</td></tr><tr id="cmprow-y" data-pick="y"><td>รายปี</td><td id="cmp-y">-</td><td id="cmp-y-i">-</td></tr></tbody></table></div>
+  </section>
+
+  <section class="card promo">
+    <img src="/fincal/ic_launcher-playstore.png" alt="Fincal" width="56" height="56" loading="lazy">
+    <div>
+      <h2>มีหลายแผนการออม?</h2>
+      <p class="note" style="margin:0">แอป Fincal เก็บแผนของคุณไว้ ใช้ได้แม้ไม่มีอินเทอร์เน็ต:</p>
+      <ul><li><b>บันทึกสถานการณ์</b>: ตั้งชื่อ เปิดใหม่ และทำสำเนาเพื่อเปรียบเทียบแผน</li><li><b>ประวัติอัตโนมัติ</b>: ทุกการคำนวณถูกเก็บไว้ให้กลับมาดูได้</li><li><b>แชร์เป็นรูปภาพ</b>: ส่งผลลัพธ์พร้อมกราฟให้ครอบครัวหรือคู่ของคุณ</li><li><b>คำนวณสินเชื่อด้วย</b>: ดอกเบี้ยหลายช่วงและการโปะหนี้พร้อมค่าธรรมเนียม</li></ul>
+      <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.namnoit.fincal&amp;referrer=utm_source%3Dnanoko.app%26utm_medium%3Dwebsite%26utm_campaign%3Dweb-fincal-calc-compound-th" target="_blank" rel="noopener"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d3ff" d="M47 24.7C40.2 30.1 36 39.3 36 51.6v408.8c0 12.3 4.2 21.5 11 26.9l1.6 1.4L277 259.7v-7.4L48.6 23.3 47 24.7z"/><path fill="#ffce00" d="M353 336.1l-76-76.4v-7.4l76.1-76.4 1.7 1L445 232.4c25.7 14.6 25.7 38.6 0 53.2L354.7 335l-1.7 1.1z"/><path fill="#ff3a44" d="M354.7 335L277 256 47 487.7c8.5 9 22.5 10.1 38.3 1.1L354.7 335z"/><path fill="#00f076" d="M354.7 177L85.3 23.2C69.5 14.2 55.5 15.3 47 24.3L277 256l77.7-79z"/></svg><span><small>ดาวน์โหลดจาก</small><strong>Google Play</strong></span></a><a class="store" href="https://apps.apple.com/app/apple-store/id6783214662?pt=128952050&amp;ct=web-fincal-calc-compound-th&amp;mt=8" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small>ดาวน์โหลดจาก</small><strong>App Store</strong></span></a></div>
+    </div>
+  </section>
+
+  <details class="card fold">
+    <summary><h2>รายละเอียดรายปี</h2><span class="fold-hint" id="sched-count"></span></summary>
+    <div class="tablewrap"><table class="sched"><thead><tr><th scope='col'>ปี</th><th scope='col'>สมทบ</th><th scope='col'>ดอกเบี้ย</th><th scope='col'>มูลค่าสิ้นปี</th></tr></thead><tbody id="sched-body"></tbody></table></div>
+    <p class="more">ดอกเบี้ยถูกบวกเข้าเมื่อสิ้นแต่ละรอบทบต้นและปัดเศษเป็นสตางค์ เหมือนในแอป Fincal</p>
+  </details>
+</div>
+</div>
+
+<article class="article">
+<h2>ดอกเบี้ยทบต้นคืออะไร</h2>
+<p>ดอกเบี้ยทบต้นคือการนำดอกเบี้ยที่ได้รับไปรวมกับเงินต้น แล้วงวดถัดไปดอกเบี้ยนั้นก็ให้ดอกเบี้ยต่อ ยิ่งเก็บเงินไว้นาน เงินยิ่งโตเร็วขึ้น</p>
+<div class="formula">FV = P × (1 + r/k)<sup>k×t</sup> + PMT × ((1 + r/k)<sup>k×t</sup> − 1) ÷ (r/k)<br>P: เงินต้น · PMT: เงินสมทบต่องวด · r: ดอกเบี้ยต่อปี · k: จำนวนรอบทบต้นต่อปี · t: จำนวนปี</div>
+<p>สูตรนี้แม่นยำเมื่อคุณสมทบหนึ่งครั้งต่อรอบทบต้นตอนสิ้นงวด เครื่องคำนวณด้านบนจำลองทุกเดือน จึงใช้ได้แม้รอบสมทบกับรอบทบต้นต่างกัน</p>
+<h2>ตัวอย่าง: เงินต้น 100,000 บาท ออมเพิ่มเดือนละ 5,000 บาท ดอกเบี้ย 5% นาน 20 ปี</h2>
+<table class="cmp">
+<thead><tr><th></th><th>จำนวนเงิน</th></tr></thead>
+<tbody>
+<tr><td>เงินที่ลงไปทั้งหมด</td><td>1,300,000.00 ฿</td></tr>
+<tr><td>ดอกเบี้ย</td><td>1,026,432.29 ฿</td></tr>
+<tr><td>มูลค่าสุดท้าย</td><td>2,326,432.29 ฿</td></tr>
+</tbody></table>
+<p>ถ้าเริ่มเร็วขึ้น 10 ปีและออมต่อเนื่อง 30 ปี แผนเดียวกันจะได้ <b>4,608,067.42 ฿</b> โดยใส่เงินไปทั้งหมดเพียง 1,900,000.00 ฿</p>
+<h2>ความถี่ทบต้นมีผลมากไหม</h2>
+<p>มีผลเล็กน้อย ด้วยตัวเลขเดียวกัน ทบต้นรายเดือนได้ 2,326,432.29 ฿ รายไตรมาส 2,320,437.86 ฿ และรายปี 2,294,752.72 ฿ ระยะเวลาและอัตราดอกเบี้ยสำคัญกว่ามาก</p>
+<h2>กฎ 72</h2>
+<p>นำ 72 หารด้วยอัตราดอกเบี้ยต่อปี จะได้จำนวนปีโดยประมาณที่เงินเพิ่มเป็นสองเท่า ดอกเบี้ย 5% ใช้เวลาประมาณ 14 ปี ส่วน 8% ประมาณ 9 ปี</p>
+<h2>คำถามที่พบบ่อย</h2>
+<div class="faq"><details><summary>ดอกเบี้ยเชิงเดียวกับดอกเบี้ยทบต้นต่างกันอย่างไร</summary><div>ดอกเบี้ยเชิงเดียวคิดจากเงินที่คุณฝากเท่านั้น ส่วนดอกเบี้ยทบต้นคิดจากดอกเบี้ยที่ได้รับแล้วด้วย ยอดเงินจึงโตเร็วขึ้นทุกปี</div></details><details><summary>เงินฝากประจำเป็นดอกเบี้ยทบต้นไหม</summary><div>ใช่ ถ้าฝากต่ออัตโนมัติพร้อมดอกเบี้ยเมื่อครบกำหนด รอบทบต้นเท่ากับระยะฝาก เช่น ฝากประจำ 3 เดือนให้เลือกทบต้นรายไตรมาส</div></details><details><summary>ดอกเบี้ยต่อปีถูกแบ่งต่องวดอย่างไร</summary><div>นำดอกเบี้ยต่อปีหารด้วยจำนวนรอบทบต้น เช่น 5% ต่อปีทบต้นรายเดือนคือ 5% ÷ 12 ต่อเดือน ซึ่งเป็นอัตราดอกเบี้ยที่ตราไว้ที่ธนาคารและเครื่องคำนวณส่วนใหญ่ใช้</div></details><details><summary>ใช้กับกองทุนหรือหุ้นได้ไหม</summary><div>ได้ในฐานะการประมาณการ ใส่ผลตอบแทนเฉลี่ยต่อปีที่คาดไว้ ผลตอบแทนจริงขึ้นลงทุกปี จึงควรมองผลลัพธ์เป็นการคาดการณ์ ไม่ใช่การรับประกัน</div></details><details><summary>ข้อมูลที่กรอกถูกส่งไปที่ไหนไหม</summary><div>ไม่ การคำนวณทั้งหมดทำในเบราว์เซอร์ของคุณ ตัวเลขจะอยู่แค่ในที่อยู่ของหน้าเพื่อให้คุณแชร์ผลลัพธ์ได้</div></details></div>
+<p class="calc-links"><a href="/fincal/khamnuan-sinchuea/">คำนวณสินเชื่อ →</a></p>
+</article>
+</main>
+
+<footer class="site"><div class="wrap">
+<a href="/fincal/">Fincal</a><a href="/fincal/privacy/">นโยบายความเป็นส่วนตัว</a><a href="/fincal/support/">ช่วยเหลือ</a>
+<div style="margin-top:8px">© 2026 <a href="/" style="margin:0">Nanoko Studio</a></div>
+</div></footer>
+<script src="/fincal/calc/compound.js" defer></script>
+</body>
+</html>
