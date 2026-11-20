@@ -247,7 +247,65 @@ footer.site a { margin: 0 8px; color: var(--muted); }
 .seg.row { grid-template-columns: 1fr 1fr; }
 .seg.row label { align-items: center; }
 .err { background: var(--warn-bg); color: var(--warn-ink); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
-.calc-links { margin: 28px 0 0; font-weight: 600; }
+.calc-links { margin: 28px 0 0; font-weight: 600; display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .cmpwrap { overflow-x: auto; }
 @media (max-width: 420px) { .cmpwrap .cmp th:nth-child(3), .cmpwrap .cmp td:nth-child(3) { display: none; } }
 [hidden] { display: none !important; }
+
+/* Articles (guides that sit next to the calculators) */
+.post h1 { margin-top: 10px; }
+.byline { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+.post .card { margin: 22px 0; }
+.post ul { padding-left: 20px; }
+.s-flat { fill: var(--c-interest); background: var(--c-interest); }
+.s-equal { fill: var(--c-principal); background: var(--c-principal); }
+.s-annuity { fill: var(--c-contrib); background: var(--c-contrib); }
+.sw.dash { background: none; height: 0; width: 14px; border-radius: 0; border-top: 2px dashed var(--c-interest); }
+.tldr p { margin: 0 0 12px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 10px; }
+.tile { background: var(--soft); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.tile span { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.tile b { font-size: 22px; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.tile small { color: var(--muted); font-size: 13px; }
+.tile.hero { background: var(--warn-bg); }
+.tile.hero span, .tile.hero small, .tile.hero b { color: var(--warn-ink); }
+.tile.hero b { font-size: 26px; }
+@media (max-width: 600px) { .tiles { grid-template-columns: 1fr 1fr; } .tile.hero { grid-column: 1 / -1; } .tile b { font-size: 19px; } }
+.fig { margin: 22px 0; }
+.fig figcaption h3, .conv h3 { margin: 0 0 2px; font-size: 18px; }
+.fig figcaption .note { color: var(--muted); font-size: 14px; margin: 0; }
+.fig .legend { margin: 10px 0 6px; }
+.fignote { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+.achart { width: 100%; max-width: 620px; height: auto; display: block; overflow: visible; touch-action: pan-y; }
+.achart .grid { stroke: var(--line); stroke-width: 1; }
+.achart .axis { stroke: var(--muted); stroke-opacity: .5; stroke-width: 1; }
+.achart .tick { fill: var(--muted); font-size: 13.5px; }
+.achart .flatline { stroke: var(--c-interest); stroke-width: 2; stroke-dasharray: 6 4; }
+.achart .hit { fill: transparent; }
+.achart .hit.on { fill: var(--text); fill-opacity: .06; }
+.cmp.static tbody tr { cursor: default; }
+.cmp.static tbody tr:hover td { background: none; }
+.hbars { margin: 16px 0 4px; display: grid; gap: 8px; }
+.hrow { display: grid; grid-template-columns: 9.5em 1fr auto; align-items: center; gap: 10px; font-size: 14px; }
+.hname { color: var(--muted); }
+.htrack { height: 14px; display: block; }
+.htrack i { display: block; height: 100%; border-radius: 0 4px 4px 0; }
+.hrow b { font-variant-numeric: tabular-nums; }
+@media (max-width: 480px) { .hrow { grid-template-columns: 1fr auto; } .htrack { grid-column: 1 / -1; grid-row: 2; } }
+.convin { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 10px; }
+.convin .field { margin: 0; }
+.convout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.convout div { background: var(--soft); border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.convout span { font-size: 13px; color: var(--muted); }
+.convout b { font-size: 19px; font-variant-numeric: tabular-nums; }
+.convout div:first-child { background: var(--warn-bg); }
+.convout div:first-child span, .convout div:first-child b { color: var(--warn-ink); }
+@media (max-width: 600px) { .convout { grid-template-columns: 1fr; } }
+.conv .more { margin: 12px 0 0; font-weight: 600; }
+.convin .box input { min-width: 0; width: 100%; }
+.scrollx { overflow-x: auto; }
+.scrollx .cmp td:first-child { white-space: nowrap; }
+@media (max-width: 420px) { .scrollx .cmp { font-size: 13px; } .scrollx .cmp th, .scrollx .cmp td { padding: 8px 3px; } }
+.cmp td small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+.cmp th.grouphead { text-align: center; }
+.cmp thead tr + tr th { border-top: 1px solid var(--line); padding-top: 4px; }
