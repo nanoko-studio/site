@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulasi Kredit dan Kalkulator Bunga Pinjaman - Cicilan per Bulan | Fincal</title>
+<meta name="description" content="Kalkulator pinjaman gratis: masukkan jumlah pinjaman, suku bunga dan tenor untuk melihat cicilan per bulan, total bunga, grafik dan tabel angsuran. Bandingkan anuitas, pokok tetap dan bunga flat.">
+<link rel="canonical" href="https://nanoko.app/fincal/simulasi-kredit/">
+<link rel="alternate" hreflang="en" href="https://nanoko.app/fincal/loan-calculator/">
+<link rel="alternate" hreflang="vi" href="https://nanoko.app/fincal/tinh-lai-vay/">
+<link rel="alternate" hreflang="id" href="https://nanoko.app/fincal/simulasi-kredit/">
+<link rel="alternate" hreflang="th" href="https://nanoko.app/fincal/khamnuan-sinchuea/">
+<link rel="alternate" hreflang="pt-BR" href="https://nanoko.app/fincal/calculadora-de-emprestimo/">
+<link rel="alternate" hreflang="ms" href="https://nanoko.app/fincal/kalkulator-pinjaman/">
+<link rel="alternate" hreflang="x-default" href="https://nanoko.app/fincal/loan-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fincal">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Simulasi Kredit dan Kalkulator Bunga Pinjaman - Cicilan per Bulan | Fincal">
+<meta property="og:description" content="Kalkulator pinjaman gratis: masukkan jumlah pinjaman, suku bunga dan tenor untuk melihat cicilan per bulan, total bunga, grafik dan tabel angsuran. Bandingkan anuitas, pokok tetap dan bunga flat.">
+<meta property="og:url" content="https://nanoko.app/fincal/simulasi-kredit/">
+<meta property="og:image" content="https://nanoko.app/fincal/ic_launcher-playstore.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f6f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6783214662">
+<link rel="icon" type="image/png" href="/fincal/ic_launcher-playstore.png">
+<link rel="stylesheet" href="/fincal/calc/calc.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Simulasi kredit dan kalkulator bunga pinjaman - Fincal", "url": "https://nanoko.app/fincal/simulasi-kredit/", "inLanguage": "id", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "description": "Kalkulator pinjaman gratis: masukkan jumlah pinjaman, suku bunga dan tenor untuk melihat cicilan per bulan, total bunga, grafik dan tabel angsuran. Bandingkan anuitas, pokok tetap dan bunga flat.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Nanoko Studio", "url": "https://nanoko.app/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Nanoko Studio", "item": "https://nanoko.app/"}, {"@type": "ListItem", "position": 2, "name": "Fincal", "item": "https://nanoko.app/fincal/"}, {"@type": "ListItem", "position": 3, "name": "Simulasi kredit", "item": "https://nanoko.app/fincal/simulasi-kredit/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Apa bedanya bunga flat, bunga efektif dan anuitas?", "acceptedAnswer": {"@type": "Answer", "text": "Bunga flat dihitung dari pokok awal sepanjang tenor. Bunga efektif dihitung dari sisa pinjaman, sehingga lebih murah pada angka bunga yang sama. Anuitas juga memakai sisa pinjaman, tetapi cicilannya dibuat sama setiap bulan, jadi total bunganya sedikit lebih besar daripada pokok tetap."}}, {"@type": "Question", "name": "Bunga 1% per bulan berapa per tahun?", "acceptedAnswer": {"@type": "Answer", "text": "1% per bulan sama dengan 12% per tahun. Jika itu bunga flat, bunga efektifnya jauh lebih tinggi, sekitar 21-22% per tahun untuk pinjaman 2 tahun. Pilih \"Bunga flat\" di atas untuk melihat angka pastinya."}}, {"@type": "Question", "name": "Apakah hasilnya sama dengan perhitungan bank?", "acceptedAnswer": {"@type": "Answer", "text": "Kalkulator menghitung bunga per bulan (bunga tahunan ÷ 12) dan membulatkan ke rupiah setiap bulan, sama seperti aplikasi Fincal. Bank yang menghitung bunga berdasarkan jumlah hari bisa sedikit berbeda."}}, {"@type": "Question", "name": "Bagaimana dengan bunga floating atau pelunasan dipercepat?", "acceptedAnswer": {"@type": "Answer", "text": "Halaman ini memakai satu suku bunga tetap. Untuk bunga promo di awal lalu bunga floating, atau pelunasan dipercepat dengan penalti, gunakan aplikasi Fincal gratis di Android dan iOS."}}, {"@type": "Question", "name": "Apakah data yang saya masukkan dikirim ke mana pun?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak. Semua perhitungan berjalan di browser Anda. Angka hanya muncul di alamat halaman agar hasilnya bisa dibagikan."}}]}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+<a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="32" height="32">Fincal</a>
+<span class="spacer"></span>
+<details class="langs"><summary aria-label="Bahasa Indonesia">ID</summary><nav class="langmenu"><a href="/fincal/loan-calculator/" hreflang="en" lang="en">English</a><a href="/fincal/tinh-lai-vay/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/fincal/simulasi-kredit/" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia</a><a href="/fincal/khamnuan-sinchuea/" hreflang="th" lang="th">ไทย</a><a href="/fincal/calculadora-de-emprestimo/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="/fincal/kalkulator-pinjaman/" hreflang="ms" lang="ms">Bahasa Melayu</a></nav></details>
+</div></header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Nanoko Studio</a> › <a href="/fincal/">Fincal</a> › <span>Simulasi kredit</span></nav>
+<h1>Simulasi kredit dan kalkulator bunga pinjaman</h1>
+<p class="intro">Masukkan jumlah pinjaman, suku bunga dan tenor untuk mengetahui cicilan per bulan, total bunga dan tabel angsuran. Semua dihitung di browser Anda - tidak ada data yang disimpan atau dikirim.</p>
+
+<div class="calc" data-loan-calc>
+<form class="card inputs" onsubmit="return false" autocomplete="off">
+  <div class="field">
+    <label for="amount">Jumlah pinjaman</label>
+    <div class="box"><span class="unit pre">Rp</span><input id="amount" inputmode="numeric" value="500.000.000" aria-describedby="amount-words"></div>
+    <p class="hint" id="amount-words" aria-live="polite"></p>
+    <div class="chips"><button type="button" data-amount="50000000">50 jt</button><button type="button" data-amount="100000000">100 jt</button><button type="button" data-amount="500000000">500 jt</button><button type="button" data-amount="1000000000">1 M</button></div>
+  </div>
+  <div class="field">
+    <label for="rate">Suku bunga</label>
+    <div class="box"><input id="rate" inputmode="decimal" value="11"><span class="unit">% per tahun</span></div>
+    <input id="rate-range" type="range" min="0" max="30" step="0.1" value="11" aria-label="Suku bunga">
+  </div>
+  <div class="field">
+    <label for="term">Tenor</label>
+    <div class="box"><input id="term" inputmode="numeric" value="15">
+      <select id="unit" aria-label="Tenor"><option value="y" selected>tahun</option><option value="m">bulan</option></select></div>
+    <input id="term-range" type="range" min="1" max="35" step="1" value="15" aria-label="Tenor">
+  </div>
+  <fieldset class="field" style="border:0;padding:0;margin:0">
+    <legend class="label" style="font-size:14px;font-weight:600;margin:0 0 6px;padding:0">Metode perhitungan</legend>
+    <div class="seg"><label><input type="radio" name="method" value="annuity" checked><span><b>Anuitas (cicilan tetap)</b><small>Cicilan sama setiap bulan, bunga dari sisa pinjaman. Umum untuk KPR dan kredit bank.</small></span></label><label><input type="radio" name="method" value="flat"><span><b>Bunga flat</b><small>Bunga selalu dihitung dari pokok awal. Umum untuk KTA, kredit motor dan mobil.</small></span></label><label><input type="radio" name="method" value="equal"><span><b>Pokok tetap (bunga efektif)</b><small>Pokok dibayar sama rata, bunga dari sisa pinjaman. Cicilan pertama paling besar.</small></span></label></div>
+  </fieldset>
+</form>
+
+<a class="mini off" id="mini" href="#results" aria-hidden="true" tabindex="-1"><span id="mini-label"></span><b id="mini-val"></b><i>↓</i></a>
+<div class="results" id="results" aria-live="polite">
+  <section class="card">
+    <div class="headline">
+      <div class="main"><div class="label" id="res-payment-label"></div><div class="big" id="res-payment">-</div><div class="sub" id="res-payment-sub"></div></div>
+      <div class="stat"><div class="label">Total yang dibayar</div><b id="res-total">-</b></div>
+      <div class="stat"><div class="label">Total bunga</div><b id="res-interest">-</b></div>
+    </div>
+    <div class="split">
+      <div class="bar" role="img" aria-label="Pokok / Total bunga"><span class="p" id="split-p" style="width:60%"></span><span class="i"></span></div>
+      <div class="legend"><span><i class="sw sw-p"></i>Pokok <b id="res-principal"></b> · <span id="split-p-pct"></span></span><span><i class="sw sw-i"></i>Bunga · <span id="split-i-pct"></span></span></div>
+    </div>
+    <div class="apr" id="res-apr" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z"/></svg><span id="res-apr-text"></span><b id="res-apr-val"></b></div>
+  </section>
+
+  <section class="card">
+    <h2>Bandingkan 3 metode</h2>
+    <p class="note">Jumlah, bunga dan tenor sama. Ketuk satu baris untuk melihat detailnya.</p>
+    <table class="cmp"><thead><tr><th scope="col">Metode</th><th scope="col">Cicilan pertama</th><th scope="col">Total bunga</th></tr></thead>
+    <tbody><tr id="cmprow-annuity" data-pick="annuity"><td>Anuitas</td><td id="cmp-annuity-pay">-</td><td id="cmp-annuity">-</td></tr><tr id="cmprow-flat" data-pick="flat"><td>Bunga flat</td><td id="cmp-flat-pay">-</td><td id="cmp-flat">-</td></tr><tr id="cmprow-equal" data-pick="equal"><td>Pokok tetap</td><td id="cmp-equal-pay">-</td><td id="cmp-equal">-</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Pokok dan bunga dari waktu ke waktu</h2>
+    <p class="note">Setiap batang adalah jumlah yang dibayar dalam setahun (atau sebulan, untuk pinjaman pendek). Ketuk batang untuk melihat detail.</p>
+    <div class="legend" style="margin:0 0 8px"><span><i class="sw sw-p"></i>Pokok</span><span><i class="sw sw-i"></i>Bunga</span></div>
+    <div class="chartbox"><svg id="chart" role="img" aria-label="Pokok dan bunga dari waktu ke waktu" viewBox="0 0 640 260"></svg><div class="tip" id="chart-tip" hidden></div></div>
+  </section>
+
+  <section class="card promo">
+    <img src="/fincal/ic_launcher-playstore.png" alt="Fincal" width="56" height="56" loading="lazy">
+    <div>
+      <h2>Pinjaman Anda lebih rumit?</h2>
+      <p class="note" style="margin:0">Aplikasi Fincal menghitung yang benar-benar diterapkan bank:</p>
+      <ul><li><b>Suku bunga berjenjang</b>: bunga promo di bulan-bulan awal, lalu bunga baru, berapa pun periodenya</li><li><b>Pelunasan dipercepat</b>: sekali atau berkala, termasuk biaya penalti; lihat bunga yang dihemat dan bulan yang dipersingkat</li><li><b>Skenario tersimpan</b>: beri nama, buka lagi dan duplikat untuk mencoba opsi lain; riwayat tersimpan otomatis</li><li><b>Tabel angsuran bulanan</b>: untuk semua tahun, dan bagikan hasil beserta grafik sebagai gambar</li></ul>
+      <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.namnoit.fincal&amp;referrer=utm_source%3Dnanoko.app%26utm_medium%3Dwebsite%26utm_campaign%3Dweb-fincal-calc-loan-id" target="_blank" rel="noopener"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d3ff" d="M47 24.7C40.2 30.1 36 39.3 36 51.6v408.8c0 12.3 4.2 21.5 11 26.9l1.6 1.4L277 259.7v-7.4L48.6 23.3 47 24.7z"/><path fill="#ffce00" d="M353 336.1l-76-76.4v-7.4l76.1-76.4 1.7 1L445 232.4c25.7 14.6 25.7 38.6 0 53.2L354.7 335l-1.7 1.1z"/><path fill="#ff3a44" d="M354.7 335L277 256 47 487.7c8.5 9 22.5 10.1 38.3 1.1L354.7 335z"/><path fill="#00f076" d="M354.7 177L85.3 23.2C69.5 14.2 55.5 15.3 47 24.3L277 256l77.7-79z"/></svg><span><small>TERSEDIA DI</small><strong>Google Play</strong></span></a><a class="store" href="https://apps.apple.com/app/apple-store/id6783214662?pt=128952050&amp;ct=web-fincal-calc-loan-id&amp;mt=8" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small>DOWNLOAD DI</small><strong>App Store</strong></span></a></div>
+    </div>
+  </section>
+
+  <details class="card fold">
+    <summary><h2>Tabel angsuran</h2><span class="fold-hint" id="sched-count"></span></summary>
+    <div class="tablewrap"><table class="sched"><thead><tr><th scope="col" id="sched-head"></th><th scope='col'>Pokok</th><th scope='col'>Bunga</th><th scope='col'>Total bayar</th><th scope='col'>Sisa pinjaman</th></tr></thead><tbody id="sched-body"></tbody></table></div>
+    <p class="more">Tahun pertama dirinci per bulan. Tabel angsuran per bulan untuk semua tahun tersedia di aplikasi Fincal.</p>
+  </details>
+</div>
+</div>
+
+<article class="article">
+<h2>Cara menghitung cicilan anuitas</h2>
+<p>Hampir semua KPR dan kredit bank memakai metode anuitas: cicilan setiap bulan sama besar, tetapi di awal sebagian besar cicilan adalah bunga, lalu porsi pokok makin besar seiring waktu.</p>
+<div class="formula">Cicilan per bulan = P × r ÷ (1 − (1 + r)<sup>−n</sup>)<br>P: jumlah pinjaman · r: bunga per tahun ÷ 12 · n: jumlah bulan</div>
+<h2>Bunga flat vs bunga efektif</h2>
+<p>Dengan bunga flat, bunga selalu dihitung dari jumlah pinjaman awal walaupun pokok sudah dicicil. Karena itu angka bunga flat terlihat kecil padahal biayanya jauh lebih tinggi. Contoh: pinjaman Rp 50 juta selama 24 bulan dengan bunga flat 12% per tahun, total bunganya Rp 12 juta - setara bunga efektif sekitar <b>21,57%</b> per tahun. Kalkulator di atas menampilkan angka setara ini saat Anda memilih bunga flat.</p>
+<div class="formula">Bunga per bulan = Pokok awal × Bunga per tahun ÷ 12<br>Cicilan = Pokok awal ÷ Tenor + Bunga per bulan</div>
+<h2>Pokok tetap (bunga efektif)</h2>
+<p>Pokok dibagi rata setiap bulan dan bunga hanya dihitung dari sisa pinjaman, jadi cicilan terbesar ada di bulan pertama lalu terus turun. Total bunganya paling kecil di antara ketiga metode.</p>
+<h2>Contoh: KPR Rp 500 juta, bunga 11% per tahun, tenor 15 tahun</h2>
+<table class="cmp">
+<thead><tr><th>Metode</th><th>Cicilan pertama</th><th>Total bunga</th></tr></thead>
+<tbody>
+<tr><td>Anuitas</td><td>Rp 5.682.985</td><td>Rp 522.937.145</td></tr>
+<tr><td>Pokok tetap</td><td>Rp 7.361.111</td><td>Rp 414.791.633</td></tr>
+<tr><td>Bunga flat</td><td>Rp 7.361.111</td><td>Rp 824.999.940</td></tr>
+</tbody></table>
+<p>Anuitas lebih ringan sekitar Rp 1,7 juta per bulan di awal, tetapi total bunganya sekitar Rp 108 juta lebih besar dibanding pokok tetap.</p>
+<h2>Pertanyaan umum</h2>
+<div class="faq"><details><summary>Apa bedanya bunga flat, bunga efektif dan anuitas?</summary><div>Bunga flat dihitung dari pokok awal sepanjang tenor. Bunga efektif dihitung dari sisa pinjaman, sehingga lebih murah pada angka bunga yang sama. Anuitas juga memakai sisa pinjaman, tetapi cicilannya dibuat sama setiap bulan, jadi total bunganya sedikit lebih besar daripada pokok tetap.</div></details><details><summary>Bunga 1% per bulan berapa per tahun?</summary><div>1% per bulan sama dengan 12% per tahun. Jika itu bunga flat, bunga efektifnya jauh lebih tinggi, sekitar 21-22% per tahun untuk pinjaman 2 tahun. Pilih &quot;Bunga flat&quot; di atas untuk melihat angka pastinya.</div></details><details><summary>Apakah hasilnya sama dengan perhitungan bank?</summary><div>Kalkulator menghitung bunga per bulan (bunga tahunan ÷ 12) dan membulatkan ke rupiah setiap bulan, sama seperti aplikasi Fincal. Bank yang menghitung bunga berdasarkan jumlah hari bisa sedikit berbeda.</div></details><details><summary>Bagaimana dengan bunga floating atau pelunasan dipercepat?</summary><div>Halaman ini memakai satu suku bunga tetap. Untuk bunga promo di awal lalu bunga floating, atau pelunasan dipercepat dengan penalti, gunakan aplikasi Fincal gratis di Android dan iOS.</div></details><details><summary>Apakah data yang saya masukkan dikirim ke mana pun?</summary><div>Tidak. Semua perhitungan berjalan di browser Anda. Angka hanya muncul di alamat halaman agar hasilnya bisa dibagikan.</div></details></div>
+</article>
+</main>
+
+<footer class="site"><div class="wrap">
+<a href="/fincal/">Fincal</a><a href="/fincal/privacy/">Kebijakan Privasi</a><a href="/fincal/support/">Dukungan</a>
+<div style="margin-top:8px">© 2026 <a href="/" style="margin:0">Nanoko Studio</a></div>
+</div></footer>
+<script src="/fincal/calc/loan.js" defer></script>
+</body>
+</html>

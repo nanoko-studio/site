@@ -162,6 +162,9 @@
     .feature .shot img { width: 220px; }
     h2.section-title { font-size: 25px; }
   }
+  .calc-link { margin: 18px 0 0; font-size: 16px; font-weight: 600; }
+  .calc-link a { text-decoration: none; }
+  .calc-link a:hover { text-decoration: underline; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -215,6 +218,8 @@
           </span>
         </a>
       </div>
+      <p class="calc-link" id="calclink-en"><a href="/fincal/loan-calculator/">Try the free online loan calculator →</a></p>
+      <p class="calc-link" id="calclink-vi" hidden><a href="/fincal/tinh-lai-vay/">Tính lãi vay online miễn phí →</a></p>
     </div>
     <div class="shot">
       <img data-en="/fincal/screenshots/en/S2.jpg" data-vi="/fincal/screenshots/vi/S2.jpg" src="/fincal/screenshots/en/S2.jpg" width="280" height="608"
@@ -362,6 +367,12 @@
 <footer class="site">
   <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư">Privacy Policy</a>
   <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ">Support</a>
+  <a href="/fincal/loan-calculator/">Loan calculator</a>
+  <a href="/fincal/tinh-lai-vay/" lang="vi">Tính lãi vay</a>
+  <a href="/fincal/simulasi-kredit/" lang="id">Simulasi kredit</a>
+  <a href="/fincal/khamnuan-sinchuea/" lang="th">คำนวณสินเชื่อ</a>
+  <a href="/fincal/calculadora-de-emprestimo/" lang="pt-BR">Calculadora de empréstimo</a>
+  <a href="/fincal/kalkulator-pinjaman/" lang="ms">Kalkulator pinjaman</a>
   <div style="margin-top:10px">© 2026 namnoit</div>
 </footer>
 
@@ -421,7 +432,7 @@
       });
 
       // swap blocks (highlights, faq)
-      ["highlights", "faq"].forEach(function (id) {
+      ["highlights", "faq", "calclink"].forEach(function (id) {
         var on = document.getElementById(id + "-" + lang);
         var off = document.getElementById(id + "-" + other);
         if (on) on.hidden = false;

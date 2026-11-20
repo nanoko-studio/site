@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan Calculator - Monthly Payment and Amortization Schedule | Fincal</title>
+<meta name="description" content="Free loan calculator: enter the amount, rate and term to see your monthly payment, total interest, a chart and the repayment schedule. Compare annuity, equal principal and flat-rate loans.">
+<link rel="canonical" href="https://nanoko.app/fincal/loan-calculator/">
+<link rel="alternate" hreflang="en" href="https://nanoko.app/fincal/loan-calculator/">
+<link rel="alternate" hreflang="vi" href="https://nanoko.app/fincal/tinh-lai-vay/">
+<link rel="alternate" hreflang="id" href="https://nanoko.app/fincal/simulasi-kredit/">
+<link rel="alternate" hreflang="th" href="https://nanoko.app/fincal/khamnuan-sinchuea/">
+<link rel="alternate" hreflang="pt-BR" href="https://nanoko.app/fincal/calculadora-de-emprestimo/">
+<link rel="alternate" hreflang="ms" href="https://nanoko.app/fincal/kalkulator-pinjaman/">
+<link rel="alternate" hreflang="x-default" href="https://nanoko.app/fincal/loan-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fincal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Loan Calculator - Monthly Payment and Amortization Schedule | Fincal">
+<meta property="og:description" content="Free loan calculator: enter the amount, rate and term to see your monthly payment, total interest, a chart and the repayment schedule. Compare annuity, equal principal and flat-rate loans.">
+<meta property="og:url" content="https://nanoko.app/fincal/loan-calculator/">
+<meta property="og:image" content="https://nanoko.app/fincal/ic_launcher-playstore.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f6f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6783214662">
+<link rel="icon" type="image/png" href="/fincal/ic_launcher-playstore.png">
+<link rel="stylesheet" href="/fincal/calc/calc.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Loan calculator - Fincal", "url": "https://nanoko.app/fincal/loan-calculator/", "inLanguage": "en", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "description": "Free loan calculator: enter the amount, rate and term to see your monthly payment, total interest, a chart and the repayment schedule. Compare annuity, equal principal and flat-rate loans.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Nanoko Studio", "url": "https://nanoko.app/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Nanoko Studio", "item": "https://nanoko.app/"}, {"@type": "ListItem", "position": 2, "name": "Fincal", "item": "https://nanoko.app/fincal/"}, {"@type": "ListItem", "position": 3, "name": "Loan calculator", "item": "https://nanoko.app/fincal/loan-calculator/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is cheaper, equal payments or equal principal?", "acceptedAnswer": {"@type": "Answer", "text": "Equal principal always costs less interest, because you repay principal faster. Equal payments are easier to budget for and start lower. If you can afford the higher first payments, equal principal is usually cheaper."}}, {"@type": "Question", "name": "Does it work for any currency?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter the amount in your currency; results are rounded to the cent every month."}}, {"@type": "Question", "name": "Will my lender's numbers match exactly?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator charges interest monthly (annual rate ÷ 12) and rounds every period, the same as the Fincal app. Lenders that charge interest by the actual number of days can differ slightly."}}, {"@type": "Question", "name": "What about rate changes or extra payments?", "acceptedAnswer": {"@type": "Answer", "text": "This page uses a single fixed rate. For an intro rate followed by a new rate, or prepayments with fees, use the free Fincal app on Android and iOS."}}, {"@type": "Question", "name": "Is what I type sent anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every calculation runs in your browser. The numbers only appear in the page address so you can share your result."}}]}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+<a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="32" height="32">Fincal</a>
+<span class="spacer"></span>
+<details class="langs"><summary aria-label="English">EN</summary><nav class="langmenu"><a href="/fincal/loan-calculator/" hreflang="en" lang="en" aria-current="true">English</a><a href="/fincal/tinh-lai-vay/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/fincal/simulasi-kredit/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/fincal/khamnuan-sinchuea/" hreflang="th" lang="th">ไทย</a><a href="/fincal/calculadora-de-emprestimo/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="/fincal/kalkulator-pinjaman/" hreflang="ms" lang="ms">Bahasa Melayu</a></nav></details>
+</div></header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Nanoko Studio</a> › <a href="/fincal/">Fincal</a> › <span>Loan calculator</span></nav>
+<h1>Loan calculator</h1>
+<p class="intro">Enter the loan amount, interest rate and term to see your monthly payment, total interest and repayment schedule. Everything runs in your browser - nothing is stored or sent anywhere.</p>
+
+<div class="calc" data-loan-calc>
+<form class="card inputs" onsubmit="return false" autocomplete="off">
+  <div class="field">
+    <label for="amount">Loan amount</label>
+    <div class="box"><input id="amount" inputmode="numeric" value="300,000" aria-describedby="amount-words"></div>
+    <p class="hint" id="amount-words" aria-live="polite"></p>
+    <div class="chips"><button type="button" data-amount="10000">10K</button><button type="button" data-amount="50000">50K</button><button type="button" data-amount="250000">250K</button><button type="button" data-amount="500000">500K</button></div>
+  </div>
+  <div class="field">
+    <label for="rate">Interest rate</label>
+    <div class="box"><input id="rate" inputmode="decimal" value="6.5"><span class="unit">% a year</span></div>
+    <input id="rate-range" type="range" min="0" max="30" step="0.1" value="6.5" aria-label="Interest rate">
+  </div>
+  <div class="field">
+    <label for="term">Loan term</label>
+    <div class="box"><input id="term" inputmode="numeric" value="30">
+      <select id="unit" aria-label="Loan term"><option value="y" selected>years</option><option value="m">months</option></select></div>
+    <input id="term-range" type="range" min="1" max="35" step="1" value="30" aria-label="Loan term">
+  </div>
+  <fieldset class="field" style="border:0;padding:0;margin:0">
+    <legend class="label" style="font-size:14px;font-weight:600;margin:0 0 6px;padding:0">Repayment method</legend>
+    <div class="seg"><label><input type="radio" name="method" value="annuity" checked><span><b>Equal monthly payments</b><small>The same payment every month (annuity). Most mortgages and car loans.</small></span></label><label><input type="radio" name="method" value="equal"><span><b>Equal principal</b><small>Same principal each month, interest on the remaining balance. Highest payment first.</small></span></label><label><input type="radio" name="method" value="flat"><span><b>Flat rate</b><small>Interest is always charged on the original amount. Common for personal and installment loans.</small></span></label></div>
+  </fieldset>
+</form>
+
+<a class="mini off" id="mini" href="#results" aria-hidden="true" tabindex="-1"><span id="mini-label"></span><b id="mini-val"></b><i>↓</i></a>
+<div class="results" id="results" aria-live="polite">
+  <section class="card">
+    <div class="headline">
+      <div class="main"><div class="label" id="res-payment-label"></div><div class="big" id="res-payment">-</div><div class="sub" id="res-payment-sub"></div></div>
+      <div class="stat"><div class="label">Total paid</div><b id="res-total">-</b></div>
+      <div class="stat"><div class="label">Total interest</div><b id="res-interest">-</b></div>
+    </div>
+    <div class="split">
+      <div class="bar" role="img" aria-label="Principal / Total interest"><span class="p" id="split-p" style="width:60%"></span><span class="i"></span></div>
+      <div class="legend"><span><i class="sw sw-p"></i>Principal <b id="res-principal"></b> · <span id="split-p-pct"></span></span><span><i class="sw sw-i"></i>Interest · <span id="split-i-pct"></span></span></div>
+    </div>
+    <div class="apr" id="res-apr" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z"/></svg><span id="res-apr-text"></span><b id="res-apr-val"></b></div>
+  </section>
+
+  <section class="card">
+    <h2>Compare the 3 methods</h2>
+    <p class="note">Same amount, rate and term. Tap a row to see its details.</p>
+    <table class="cmp"><thead><tr><th scope="col">Method</th><th scope="col">First payment</th><th scope="col">Total interest</th></tr></thead>
+    <tbody><tr id="cmprow-annuity" data-pick="annuity"><td>Equal payments</td><td id="cmp-annuity-pay">-</td><td id="cmp-annuity">-</td></tr><tr id="cmprow-equal" data-pick="equal"><td>Equal principal</td><td id="cmp-equal-pay">-</td><td id="cmp-equal">-</td></tr><tr id="cmprow-flat" data-pick="flat"><td>Flat rate</td><td id="cmp-flat-pay">-</td><td id="cmp-flat">-</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Principal and interest over time</h2>
+    <p class="note">Each bar is what you pay in a year (or a month, for short loans). Tap a bar for details.</p>
+    <div class="legend" style="margin:0 0 8px"><span><i class="sw sw-p"></i>Principal</span><span><i class="sw sw-i"></i>Interest</span></div>
+    <div class="chartbox"><svg id="chart" role="img" aria-label="Principal and interest over time" viewBox="0 0 640 260"></svg><div class="tip" id="chart-tip" hidden></div></div>
+  </section>
+
+  <section class="card promo">
+    <img src="/fincal/ic_launcher-playstore.png" alt="Fincal" width="56" height="56" loading="lazy">
+    <div>
+      <h2>Is your loan more complicated?</h2>
+      <p class="note" style="margin:0">The Fincal app handles what lenders actually do:</p>
+      <ul><li><b>Rate changes</b>: an intro rate for the first months, then a new rate - as many periods as you need</li><li><b>Prepayments</b>: one-off or recurring, with fees; see the interest saved and months cut</li><li><b>Saved scenarios</b>: name, reopen and duplicate them to try other options; history is saved automatically</li><li><b>Monthly schedule</b>: for every year, and share the result with its charts as an image</li></ul>
+      <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.namnoit.fincal&amp;referrer=utm_source%3Dnanoko.app%26utm_medium%3Dwebsite%26utm_campaign%3Dweb-fincal-calc-loan" target="_blank" rel="noopener"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d3ff" d="M47 24.7C40.2 30.1 36 39.3 36 51.6v408.8c0 12.3 4.2 21.5 11 26.9l1.6 1.4L277 259.7v-7.4L48.6 23.3 47 24.7z"/><path fill="#ffce00" d="M353 336.1l-76-76.4v-7.4l76.1-76.4 1.7 1L445 232.4c25.7 14.6 25.7 38.6 0 53.2L354.7 335l-1.7 1.1z"/><path fill="#ff3a44" d="M354.7 335L277 256 47 487.7c8.5 9 22.5 10.1 38.3 1.1L354.7 335z"/><path fill="#00f076" d="M354.7 177L85.3 23.2C69.5 14.2 55.5 15.3 47 24.3L277 256l77.7-79z"/></svg><span><small>GET IT ON</small><strong>Google Play</strong></span></a><a class="store" href="https://apps.apple.com/app/apple-store/id6783214662?pt=128952050&amp;ct=web-fincal-calc-loan&amp;mt=8" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small>DOWNLOAD ON THE</small><strong>App Store</strong></span></a></div>
+    </div>
+  </section>
+
+  <details class="card fold">
+    <summary><h2>Repayment schedule</h2><span class="fold-hint" id="sched-count"></span></summary>
+    <div class="tablewrap"><table class="sched"><thead><tr><th scope="col" id="sched-head"></th><th scope='col'>Principal</th><th scope='col'>Interest</th><th scope='col'>Total paid</th><th scope='col'>Balance left</th></tr></thead><tbody id="sched-body"></tbody></table></div>
+    <p class="more">The first year is broken down by month. The monthly schedule for every year is in the Fincal app.</p>
+  </details>
+</div>
+</div>
+
+<article class="article">
+<h2>How equal monthly payments are calculated</h2>
+<p>Most mortgages and car loans use equal monthly payments (an annuity). Each payment is the same, but early payments are mostly interest and later ones mostly principal.</p>
+<div class="formula">Monthly payment = P × r ÷ (1 − (1 + r)<sup>−n</sup>)<br>P: loan amount · r: annual rate ÷ 12 · n: number of months</div>
+<h2>How equal principal works</h2>
+<p>The principal is split evenly across all months and interest is charged only on the remaining balance, so payments start high and fall every month. Total interest is lower than with equal payments.</p>
+<div class="formula">Principal each month = Loan amount ÷ Months<br>Interest this month = Remaining balance × Annual rate ÷ 12</div>
+<h2>Why flat-rate loans cost more than they look</h2>
+<p>With a flat rate, interest is always charged on the original amount, even after you have repaid part of it. A 2-year loan of 25,000 at a 12% flat rate costs 6,000 in interest - the same as a reducing-balance rate of about <b>21.57%</b>. The calculator shows this real rate when you pick Flat rate.</p>
+<h2>Example: 300,000 at 6.5% for 30 years</h2>
+<table class="cmp">
+<thead><tr><th>Method</th><th>First payment</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>Equal payments</td><td>1,896.20</td><td>382,636.71</td></tr>
+<tr><td>Equal principal</td><td>2,458.33</td><td>293,313.66</td></tr>
+<tr><td>Flat rate</td><td>2,458.33</td><td>585,000.00</td></tr>
+</tbody></table>
+<p>Equal payments start about 562 lower each month, but cost about 89,000 more in interest over the life of the loan.</p>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>Which is cheaper, equal payments or equal principal?</summary><div>Equal principal always costs less interest, because you repay principal faster. Equal payments are easier to budget for and start lower. If you can afford the higher first payments, equal principal is usually cheaper.</div></details><details><summary>Does it work for any currency?</summary><div>Yes. Enter the amount in your currency; results are rounded to the cent every month.</div></details><details><summary>Will my lender&#x27;s numbers match exactly?</summary><div>The calculator charges interest monthly (annual rate ÷ 12) and rounds every period, the same as the Fincal app. Lenders that charge interest by the actual number of days can differ slightly.</div></details><details><summary>What about rate changes or extra payments?</summary><div>This page uses a single fixed rate. For an intro rate followed by a new rate, or prepayments with fees, use the free Fincal app on Android and iOS.</div></details><details><summary>Is what I type sent anywhere?</summary><div>No. Every calculation runs in your browser. The numbers only appear in the page address so you can share your result.</div></details></div>
+</article>
+</main>
+
+<footer class="site"><div class="wrap">
+<a href="/fincal/">Fincal</a><a href="/fincal/privacy/">Privacy Policy</a><a href="/fincal/support/">Support</a>
+<div style="margin-top:8px">© 2026 <a href="/" style="margin:0">Nanoko Studio</a></div>
+</div></footer>
+<script src="/fincal/calc/loan.js" defer></script>
+</body>
+</html>
