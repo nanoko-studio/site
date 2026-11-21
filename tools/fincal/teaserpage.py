@@ -140,7 +140,7 @@ def build(lang):
                    for i, (p, k) in enumerate(t["packages"]))
     V["PTABLE"] = (f'<div class="scrollx"><table class="cmp static ex3 pkg"><thead><tr><th scope="col">{e(pt_[0])}</th>'
                    f'<th colspan="{len(t["pkg_floats"])}" scope="colgroup" class="grouphead">{e(pt_[1])}</th></tr><tr><th></th>'
-                   + "".join(f'<th scope="col">{e(pt_[2].format(r=x.num(f, 0)))}</th>' for f in t["pkg_floats"])
+                   + "".join(f'<th scope="col">{e(pt_[2].format(r=x.num(f, 1).rstrip("0").rstrip(",.")))}</th>' for f in t["pkg_floats"])
                    + f'</tr></thead><tbody>{prow}</tbody></table></div>')
     f = t["fig"]
     legend = "".join(f'<span><i class="sw {c}"></i>{e(t["series"].format(r=x.rate(r)))}</span>' for r, c in zip(t["chart_floats"], CLS))
