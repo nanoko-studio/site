@@ -190,7 +190,7 @@ def build(lang):
     if len(ORDER) > 1:
         menu = "".join(f'<a href="{T[k]["path"]}" hreflang="{k}" lang="{k}"' + (' aria-current="true"' if k == lang else "")
                        + f'>{e(LOAN[k]["name"])}</a>' for k in ORDER)
-        langs = f'<details class="langs"><summary aria-label="{e(lt["name"])}">{lt["short"]}</summary><nav class="langmenu">{menu}</nav></details>'
+        langs = f'<details class="langs"><summary aria-label="{e(lt["name"])}">{e(lt["name"])}</summary><nav class="langmenu">{menu}</nav></details>'
     ld = json.dumps({"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": t["h1"], "description": t["desc"], "inLanguage": lang, "url": url,
          "mainEntityOfPage": url, "datePublished": DATE, "dateModified": DATE,

@@ -273,7 +273,7 @@ def build(lang):
 <a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="32" height="32">Fincal</a>
 <span class="spacer"></span>
 {nav(lang)}
-<details class="langs"><summary aria-label="{e(lt["name"])}">{lt["short"]}</summary><nav class="langmenu">{langmenu}</nav></details>
+<details class="langs"><summary aria-label="{e(lt["name"])}">{e(lt["name"])}</summary><nav class="langmenu">{langmenu}</nav></details>
 </div></header>
 
 <main class="wrap">

@@ -239,7 +239,7 @@ def page(lang):
 <a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="" width="32" height="32">Fincal</a>
 <span class="spacer"></span>
 {nav(lang)}
-<details class="langs"><summary aria-label="{e(t["name"])}">{t["short"]}</summary><nav class="langmenu">{langmenu}</nav></details>
+<details class="langs"><summary aria-label="{e(t["name"])}">{e(t["name"])}</summary><nav class="langmenu">{langmenu}</nav></details>
 </div></header>
 
 <main class="wrap">
