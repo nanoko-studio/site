@@ -1,7 +1,7 @@
 # nanoko.app
 
 Website tĩnh của Nanoko Studio, deploy bằng GitHub Pages (branch `main`, root), custom domain `nanoko.app` (file `CNAME`).
-HTML/CSS/JS thuần, không build.
+HTML/CSS/JS thuần, không có bước build khi deploy (trang Fincal sinh sẵn bằng `tools/fincal/`, xem bên dưới).
 
 ## Cấu trúc
 
@@ -29,6 +29,19 @@ App: `lendnote`, `purrchup`, `lotingo`, `fincal`, `limno`, `punyo`.
 - Mỗi trang có `<title>` và `description` bắt đầu bằng tên app, `canonical` trỏ chính nó, Open Graph; landing có JSON-LD `SoftwareApplication`.
 - Thêm/xoá trang thì sửa `sitemap.xml`.
 - Văn bản dùng `-`, không dùng dấu gạch dài.
+
+## Fincal: công cụ tính và bài viết
+
+Các trang công cụ tính, bài viết và trang Blog của Fincal được sinh ra bằng script trong `tools/fincal/`. Không sửa tay các file HTML này, sửa script rồi chạy lại:
+
+```bash
+python3 -I tools/fincal/build.py
+```
+
+- `tools/fincal/articles.py`: danh sách bài viết (chủ đề, ngày), dùng để dựng trang Blog, mục "Bài liên quan", link Blog trên header và cập nhật `sitemap.xml`.
+- `<x>lang.py`: nội dung từng ngôn ngữ. `<x>page.py`: khung trang.
+- Thêm bài: viết `<x>lang.py` + `<x>page.py`, thêm một dòng vào `ARTICLES` và tên script vào `GENERATORS` trong `build.py`, rồi chạy lại build.
+- Kiểm tra link: `python3 -m http.server 8765` ở gốc repo, rồi `python3 -I tools/linkcheck.py http://localhost:8765`.
 
 ## Những thứ KHÔNG nằm ở đây
 

@@ -55,7 +55,7 @@
     line-height: 1.6;
     font-size: 17px;
   }
-  img { max-width: 100%; display: block; }
+  img { max-width: 100%; height: auto; display: block; }
   a { color: var(--link); }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
@@ -70,6 +70,8 @@
   .topbar img { width: 36px; height: 36px; border-radius: 9px; }
   .topbar .brand { font-weight: 700; font-size: 18px; }
   .topbar .spacer { flex: 1; }
+  .navlink { font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; padding: 6px 4px; }
+  .navlink:hover { color: var(--green); }
   .langbar { display: flex; gap: 6px; }
   .langbar button {
     appearance: none; border: 1px solid var(--border); background: var(--surface);
@@ -175,6 +177,7 @@
     <img src="/fincal/ic_launcher-playstore.png" alt="Fincal">
     <span class="brand">Fincal</span>
     <span class="spacer"></span>
+    <a class="navlink" id="bloglink-en" href="/fincal/blog/">Blog</a><a class="navlink" id="bloglink-vi" href="/fincal/blog/vi/" hidden>Blog</a>
     <div class="langbar" role="group" aria-label="Language">
       <button type="button" data-lang="en">EN</button>
       <button type="button" data-lang="vi">VI</button>
@@ -367,7 +370,7 @@
 <footer class="site">
   <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư">Privacy Policy</a>
   <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ">Support</a>
-  <div style="margin-top:10px">© 2026 Nanoko Studio · Truong Phuong Nam</div>
+  <div style="margin-top:10px">© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</div>
 </footer>
 
 <script>
@@ -426,7 +429,7 @@
       });
 
       // swap blocks (highlights, faq)
-      ["highlights", "faq", "calclink"].forEach(function (id) {
+      ["highlights", "faq", "calclink", "bloglink"].forEach(function (id) {
         var on = document.getElementById(id + "-" + lang);
         var off = document.getElementById(id + "-" + other);
         if (on) on.hidden = false;
