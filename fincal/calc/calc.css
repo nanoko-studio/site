@@ -221,10 +221,11 @@ h2 { font-size: 20px; letter-spacing: -.01em; margin: 0 0 4px; }
 .faq summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
 .faq details > div { padding: 0 16px 12px; color: var(--muted); }
 
-footer.site { margin-top: 48px; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; }
-footer.site a { margin: 0 8px; color: var(--muted); }
-footer.site .copy { margin-top: 8px; }
-footer.site .copy a { margin: 0; }
+footer.site { margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+footer.site a { color: var(--muted); }
+footer.site .copy { margin-left: auto; }
+@media (max-width: 640px) { footer.site .wrap { justify-content: center; } footer.site .copy { margin-left: 0; flex-basis: 100%; text-align: center; } }
 /* Mobile: live summary while the inputs fill the screen */
 .mini { display: none; }
 @media (max-width: 860px) {

@@ -54,7 +54,7 @@
     line-height: 1.65;
     font-size: 17px;
   }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 80px; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 0; }
 
   header.site {
     display: flex;
@@ -107,7 +107,10 @@
   .meta { color: var(--muted); font-size: 15px; }
   .meta p { margin: 2px 0; }
   .accent { color: var(--green-dark); }
-  footer.site { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  footer.site { margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+  footer.site a { color: var(--muted); }
+  footer.site .copy { margin-left: auto; }
+  @media (max-width: 640px) { footer.site { justify-content: center; } footer.site .copy { margin-left: 0; flex-basis: 100%; text-align: center; } }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -302,8 +305,10 @@
   </main>
 
   <footer class="site">
-    <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ" style="margin-right:14px">Support</a>
-    <span>© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</span>
+    <a href="/fincal/">Fincal</a>
+    <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư">Privacy Policy</a>
+    <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ">Support</a>
+    <span class="copy">© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</span>
   </footer>
 
 </div>

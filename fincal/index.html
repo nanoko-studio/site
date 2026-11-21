@@ -145,8 +145,11 @@
   .final-cta h2 { font-size: 28px; margin: 0 0 22px; }
   .final-cta .cta { justify-content: center; }
 
-  footer.site { margin-top: 40px; padding: 28px 0 56px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
-  footer.site a { margin: 0 10px; }
+  footer.site { margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+  footer.site a { color: var(--muted); }
+  footer.site .copy { margin-left: auto; }
+  @media (max-width: 640px) { footer.site .wrap { justify-content: center; } footer.site .copy { margin-left: 0; flex-basis: 100%; text-align: center; } }
 
   @media (max-width: 820px) {
     .hero { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; text-align: center; }
@@ -440,11 +443,12 @@
 
 </div>
 
-<footer class="site">
+<footer class="site"><div class="wrap">
+  <a href="/fincal/">Fincal</a>
   <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư" data-id="Kebijakan Privasi" data-th="นโยบายความเป็นส่วนตัว" data-pt="Política de Privacidade" data-ms="Dasar Privasi">Privacy Policy</a>
   <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ" data-id="Dukungan" data-th="ช่วยเหลือ" data-pt="Suporte" data-ms="Sokongan">Support</a>
-  <div style="margin-top:10px">© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</div>
-</footer>
+  <div class="copy">© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</div>
+</div></footer>
 
 <script>
   (function () {
