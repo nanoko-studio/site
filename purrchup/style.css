@@ -87,8 +87,10 @@ h1 {
 /* Text pages: privacy policy and support. Calm on purpose: the pink stays an accent, as on other games' policy pages */
 body.doc { display: block; background: #E6F4FD; }
 .bar {
+  position: sticky; top: 0; z-index: 10;
   border-bottom: 4px solid var(--pink);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
 }
 .bar-in {
   max-width: 960px;

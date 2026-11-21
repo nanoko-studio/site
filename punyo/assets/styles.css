@@ -95,9 +95,12 @@ a:hover { text-decoration: none; }
 /* --- Header ------------------------------------------------------------ */
 
 .topbar {
-  max-width: var(--measure-wide);
-  margin: 0 auto;
-  padding: 20px 0 0;
+  position: sticky; top: 0; z-index: 10;
+  margin: 0 calc(-1 * var(--gutter));
+  padding: 12px max(var(--gutter), calc((100% + 2 * var(--gutter) - var(--measure-wide)) / 2));
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--on-surface) 10%, transparent);
   display: flex;
   align-items: center;
   justify-content: space-between;

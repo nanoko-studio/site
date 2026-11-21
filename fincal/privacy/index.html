@@ -56,24 +56,13 @@
   }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 0; }
 
-  header.site {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 8px;
-  }
-  header.site img {
-    width: 56px; height: 56px;
-    border-radius: 14px;
-    flex: 0 0 auto;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-  }
-  header.site .brand { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
-  header.site .tag { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  header.site { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--border); }
+  header.site .inner { display: flex; align-items: center; gap: 12px; max-width: 1080px; margin: 0 auto; padding: 12px 20px; }
+  header.site a.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
+  header.site img { width: 36px; height: 36px; border-radius: 9px; }
+  header.site .spacer { flex: 1; }
 
-  .langbar { display: flex; gap: 8px; margin: 18px 0 6px; }
+  .langbar { display: flex; gap: 8px; }
   .langbar button {
     appearance: none;
     border: 1px solid var(--border);
@@ -115,20 +104,15 @@
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <header class="site">
-    <img src="/fincal/ic_launcher-playstore.png" alt="Fincal app icon">
-    <div>
-      <div class="brand">Fincal</div>
-      <div class="tag" data-en="Personal finance calculator" data-vi="Máy tính tài chính cá nhân">Personal finance calculator</div>
-    </div>
-  </header>
-
+<header class="site"><div class="inner">
+  <a class="brand" href="/fincal/"><img src="/fincal/ic_launcher-playstore.png" alt="">Fincal</a>
+  <span class="spacer"></span>
   <div class="langbar" role="group" aria-label="Language">
-    <button type="button" data-lang="en">English</button>
-    <button type="button" data-lang="vi">Tiếng Việt</button>
-  </div>
+      <button type="button" data-lang="en">English</button>
+      <button type="button" data-lang="vi">Tiếng Việt</button>
+    </div>
+</div></header>
+<div class="wrap">
 
   <!-- ================= ENGLISH ================= -->
   <main id="content-en">
