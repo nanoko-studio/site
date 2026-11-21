@@ -44,7 +44,8 @@ a { color: var(--green-ink); }
 .num, .stat b, .big, td, .cmp td { font-variant-numeric: tabular-nums; }
 
 /* Top bar */
-.topbar { border-bottom: 1px solid var(--line); background: var(--surface); }
+.topbar { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(8px); backdrop-filter: saturate(1.4) blur(8px); }
+html { scroll-padding-top: 64px; }
 .topbar .wrap { display: flex; align-items: center; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
 .topbar .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 17px; }
 .topbar .brand img { width: 32px; height: 32px; border-radius: 8px; }
