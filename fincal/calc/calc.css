@@ -309,3 +309,19 @@ footer.site a { margin: 0 8px; color: var(--muted); }
 .cmp td small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
 .cmp th.grouphead { text-align: center; }
 .cmp thead tr + tr th { border-top: 1px solid var(--line); padding-top: 4px; }
+/* Prepayment article */
+.achart path.ln { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.achart path.ln.s-flat { stroke: var(--c-interest); }
+.achart path.ln.s-equal { stroke: var(--c-principal); }
+.achart path.ln.s-annuity { stroke: var(--c-contrib); }
+.prepay .ppfee { margin: 14px 0 4px; color: var(--muted); font-size: 14px; }
+.prepay .ppfee b { color: var(--text); font-variant-numeric: tabular-nums; }
+.scrollx .cmp.ppout td, .scrollx .cmp.ex3 td { white-space: normal; }
+.prepay .ppout { table-layout: fixed; }
+.prepay .ppout th:first-child, .prepay .ppout td:first-child { width: 36%; }
+.ex3 { table-layout: fixed; }
+.ex3 th:first-child, .ex3 td:first-child { width: 34%; }
+.ex3 th { white-space: normal; }
+@media (max-width: 600px) { .prepay .convin .field.wide { grid-column: 1 / -1; } }
+/* Room for the highlighted row's bar: every first column gets the same inset so labels stay aligned */
+.cmp th:first-child, .cmp td:first-child { padding-left: 12px; }
