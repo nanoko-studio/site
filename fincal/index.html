@@ -72,15 +72,12 @@
   .topbar .spacer { flex: 1; }
   .navlink { font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; padding: 6px 4px; }
   .navlink:hover { color: var(--green); }
-  .langbar { display: flex; gap: 6px; }
-  .langbar button {
-    appearance: none; border: 1px solid var(--border); background: var(--surface);
-    color: var(--text); font: inherit; font-size: 13px; font-weight: 600;
-    padding: 6px 13px; border-radius: 999px; cursor: pointer;
-    transition: background .15s, color .15s, border-color .15s;
+  .langsel {
+    appearance: none; -webkit-appearance: none; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 12px center;
+    color: var(--text); font: inherit; font-size: 13px; font-weight: 600; padding: 6px 30px 6px 13px; cursor: pointer; max-width: 46vw;
   }
-  .langbar button:hover { border-color: var(--green); }
-  .langbar button[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+  .langsel:hover, .langsel:focus-visible { border-color: var(--green); }
 
   /* Hero */
   .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 64px 0 56px; }
@@ -177,11 +174,15 @@
     <img src="/fincal/ic_launcher-playstore.png" alt="Fincal">
     <span class="brand">Fincal</span>
     <span class="spacer"></span>
-    <a class="navlink" id="bloglink-en" href="/fincal/blog/">Blog</a><a class="navlink" id="bloglink-vi" href="/fincal/blog/vi/" hidden>Blog</a>
-    <div class="langbar" role="group" aria-label="Language">
-      <button type="button" data-lang="en">EN</button>
-      <button type="button" data-lang="vi">VI</button>
-    </div>
+    <a class="navlink" id="bloglink-en" href="/fincal/blog/">Blog</a><a class="navlink" id="bloglink-vi" href="/fincal/blog/vi/" hidden>Blog</a><a class="navlink" id="bloglink-id" href="/fincal/blog/id/" hidden>Blog</a><a class="navlink" id="bloglink-th" href="/fincal/blog/th/" hidden>บล็อก</a><a class="navlink" id="bloglink-pt" href="/fincal/blog/pt-br/" hidden>Blog</a><a class="navlink" id="bloglink-ms" href="/fincal/blog/ms/" hidden>Blog</a>
+    <select class="langsel" aria-label="Language">
+      <option value="en">English</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="id">Bahasa Indonesia</option>
+      <option value="th">ไทย</option>
+      <option value="pt">Português (Brasil)</option>
+      <option value="ms">Bahasa Melayu</option>
+    </select>
   </div>
 </div>
 
@@ -190,10 +191,10 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="ftext">
-      <h1 data-en="Make confident money decisions." data-vi="Tự tin với mọi quyết định tài chính.">Make confident money decisions.</h1>
+      <h1 data-en="Make confident money decisions." data-vi="Tự tin với mọi quyết định tài chính." data-id="Ambil keputusan keuangan dengan yakin." data-th="ตัดสินใจเรื่องเงินได้อย่างมั่นใจ" data-pt="Decida sobre seu dinheiro com confiança." data-ms="Buat keputusan kewangan dengan yakin.">Make confident money decisions.</h1>
       <p class="sub"
          data-en="Fincal is a free loan and compound-interest calculator that turns your numbers into clear answers and charts - and keeps everything private on your device."
-         data-vi="Fincal là ứng dụng miễn phí tính lãi vay và lãi kép, biến những con số của bạn thành câu trả lời và biểu đồ rõ ràng - và giữ mọi thứ riêng tư ngay trên thiết bị.">Fincal is a free loan and compound-interest calculator that turns your numbers into clear answers and charts - and keeps everything private on your device.</p>
+         data-vi="Fincal là ứng dụng miễn phí tính lãi vay và lãi kép, biến những con số của bạn thành câu trả lời và biểu đồ rõ ràng - và giữ mọi thứ riêng tư ngay trên thiết bị." data-id="Fincal adalah kalkulator pinjaman dan bunga majemuk gratis yang mengubah angka Anda menjadi jawaban dan grafik yang jelas - dan semuanya tetap privat di perangkat Anda." data-th="Fincal คือเครื่องคำนวณสินเชื่อและดอกเบี้ยทบต้นฟรี ที่เปลี่ยนตัวเลขของคุณให้เป็นคำตอบและกราฟที่ชัดเจน - และเก็บทุกอย่างไว้เป็นส่วนตัวบนเครื่องของคุณ" data-pt="Fincal é uma calculadora gratuita de empréstimos e juros compostos que transforma seus números em respostas e gráficos claros - e mantém tudo privado no seu aparelho." data-ms="Fincal ialah kalkulator pinjaman dan faedah kompaun percuma yang menukar angka anda kepada jawapan dan carta yang jelas - dan semuanya kekal peribadi dalam peranti anda.">Fincal is a free loan and compound-interest calculator that turns your numbers into clear answers and charts - and keeps everything private on your device.</p>
       <div class="cta">
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.namnoit.fincal&amp;referrer=utm_source%3Dnanoko.app%26utm_medium%3Dwebsite%26utm_campaign%3Dweb-fincal-landing" target="_blank" rel="noopener">
           <span class="icon">
@@ -205,7 +206,7 @@
             </svg>
           </span>
           <span class="txt">
-            <span class="sm" data-en="GET IT ON" data-vi="TẢI TRÊN">GET IT ON</span>
+            <span class="sm" data-en="GET IT ON" data-vi="TẢI TRÊN" data-id="TERSEDIA DI" data-th="ดาวน์โหลดได้ที่" data-pt="DISPONÍVEL NO" data-ms="DAPATKAN DI">GET IT ON</span>
             <span class="lg">Google Play</span>
           </span>
         </a>
@@ -216,16 +217,20 @@
             </svg>
           </span>
           <span class="txt">
-            <span class="sm" data-en="DOWNLOAD ON THE" data-vi="TẢI TRÊN">DOWNLOAD ON THE</span>
+            <span class="sm" data-en="DOWNLOAD ON THE" data-vi="TẢI TRÊN" data-id="UNDUH DI" data-th="ดาวน์โหลดได้ที่" data-pt="BAIXAR NA" data-ms="MUAT TURUN DI">DOWNLOAD ON THE</span>
             <span class="lg">App Store</span>
           </span>
         </a>
       </div>
       <p class="calc-link" id="calclink-en"><a href="/fincal/loan-calculator/">Free online loan calculator →</a><br><a href="/fincal/compound-interest-calculator/">Free compound interest calculator →</a></p>
       <p class="calc-link" id="calclink-vi" hidden><a href="/fincal/tinh-lai-vay/">Tính lãi vay online miễn phí →</a><br><a href="/fincal/tinh-lai-kep/">Tính lãi kép online miễn phí →</a></p>
+      <p class="calc-link" id="calclink-id" hidden><a href="/fincal/simulasi-kredit/">Simulasi kredit online gratis →</a><br><a href="/fincal/kalkulator-bunga-majemuk/">Kalkulator bunga majemuk gratis →</a></p>
+      <p class="calc-link" id="calclink-th" hidden><a href="/fincal/khamnuan-sinchuea/">คำนวณสินเชื่อออนไลน์ฟรี →</a><br><a href="/fincal/khamnuan-dokbia-thop-ton/">คำนวณดอกเบี้ยทบต้นฟรี →</a></p>
+      <p class="calc-link" id="calclink-pt" hidden><a href="/fincal/calculadora-de-emprestimo/">Calculadora de empréstimo online grátis →</a><br><a href="/fincal/calculadora-de-juros-compostos/">Calculadora de juros compostos grátis →</a></p>
+      <p class="calc-link" id="calclink-ms" hidden><a href="/fincal/kalkulator-pinjaman/">Kalkulator pinjaman dalam talian percuma →</a><br><a href="/fincal/kalkulator-faedah-kompaun/">Kalkulator faedah kompaun percuma →</a></p>
     </div>
     <div class="shot">
-      <img data-en="/fincal/screenshots/en/S2.jpg" data-vi="/fincal/screenshots/vi/S2.jpg" src="/fincal/screenshots/en/S2.jpg" width="280" height="608"
+      <img data-en="/fincal/screenshots/en/S2.jpg" data-vi="/fincal/screenshots/vi/S2.jpg" data-th="/fincal/screenshots/th/S2.jpg" data-pt="/fincal/screenshots/pt-br/S2.jpg" data-ms="/fincal/screenshots/ms/S2.jpg" src="/fincal/screenshots/en/S2.jpg" width="280" height="608"
            alt="Fincal loan result with a principal-versus-interest donut chart and a year-by-year bar chart">
     </div>
   </section>
@@ -233,62 +238,62 @@
   <!-- ===================== VALUE PROPS ===================== -->
   <section>
     <h2 class="section-title" data-en="Everything you need to plan with confidence"
-        data-vi="Mọi thứ bạn cần để lên kế hoạch tự tin">Everything you need to plan with confidence</h2>
+        data-vi="Mọi thứ bạn cần để lên kế hoạch tự tin" data-id="Semua yang Anda butuhkan untuk merencanakan dengan yakin" data-th="ทุกสิ่งที่คุณต้องใช้ในการวางแผนอย่างมั่นใจ" data-pt="Tudo o que você precisa para planejar com confiança" data-ms="Semua yang anda perlukan untuk merancang dengan yakin">Everything you need to plan with confidence</h2>
 
     <div class="feature">
       <div class="ftext">
         <span class="num">01</span>
-        <h3 data-en="See the true cost of any loan" data-vi="Thấy chi phí thật của khoản vay">See the true cost of any loan</h3>
+        <h3 data-en="See the true cost of any loan" data-vi="Thấy chi phí thật của khoản vay" data-id="Lihat biaya sebenarnya dari setiap pinjaman" data-th="เห็นต้นทุนจริงของทุกสินเชื่อ" data-pt="Veja o custo real de qualquer empréstimo" data-ms="Lihat kos sebenar setiap pinjaman">See the true cost of any loan</h3>
         <p data-en="Compare equal-principal, equal-instalment, and flat-rate loans side by side - and see the real effective rate, so a “low” flat rate can't fool you."
-           data-vi="So sánh trả gốc đều, trả góp đều và lãi phẳng cạnh nhau - và xem lãi suất thực, để một mức lãi phẳng “thấp” không đánh lừa được bạn.">Compare equal-principal, equal-instalment, and flat-rate loans side by side - and see the real effective rate, so a “low” flat rate can't fool you.</p>
+           data-vi="So sánh trả gốc đều, trả góp đều và lãi phẳng cạnh nhau - và xem lãi suất thực, để một mức lãi phẳng “thấp” không đánh lừa được bạn." data-id="Bandingkan pinjaman pokok tetap, angsuran tetap, dan bunga flat berdampingan - dan lihat bunga efektif sebenarnya, agar bunga flat yang “rendah” tidak menipu Anda." data-th="เปรียบเทียบสินเชื่อแบบเงินต้นเท่ากัน ผ่อนเท่ากันทุกงวด และ flat rate แบบเคียงข้างกัน - และดูอัตราดอกเบี้ยที่แท้จริง เพื่อไม่ให้ flat rate ที่ดู “ต่ำ” หลอกคุณได้" data-pt="Compare amortização constante (SAC), parcelas fixas (Price) e taxa flat lado a lado - e veja a taxa efetiva real, para que uma taxa flat “baixa” não engane você." data-ms="Bandingkan pinjaman pokok sama rata, ansuran sama rata dan kadar rata secara sebelah-menyebelah - dan lihat kadar efektif sebenar, supaya kadar rata yang “rendah” tidak memperdaya anda.">Compare equal-principal, equal-instalment, and flat-rate loans side by side - and see the real effective rate, so a “low” flat rate can't fool you.</p>
       </div>
-      <div class="shot"><img data-en="/fincal/screenshots/en/S3.jpg" data-vi="/fincal/screenshots/vi/S3.jpg" src="/fincal/screenshots/en/S3.jpg" loading="lazy" width="250" height="543" alt="Loan input with the three repayment methods"></div>
+      <div class="shot"><img data-en="/fincal/screenshots/en/S3.jpg" data-vi="/fincal/screenshots/vi/S3.jpg" data-th="/fincal/screenshots/th/S3.jpg" data-pt="/fincal/screenshots/pt-br/S3.jpg" data-ms="/fincal/screenshots/ms/S3.jpg" src="/fincal/screenshots/en/S3.jpg" loading="lazy" width="250" height="543" alt="Loan input with the three repayment methods"></div>
     </div>
 
     <div class="feature">
       <div class="ftext">
         <span class="num">02</span>
-        <h3 data-en="Plan around real life" data-vi="Lên kế hoạch theo đời thực">Plan around real life</h3>
+        <h3 data-en="Plan around real life" data-vi="Lên kế hoạch theo đời thực" data-id="Rencanakan sesuai kenyataan" data-th="วางแผนตามชีวิตจริง" data-pt="Planeje de acordo com a vida real" data-ms="Rancang mengikut kehidupan sebenar">Plan around real life</h3>
         <p data-en="Handle interest rates that change over time, add early repayments, and instantly see how much time and money you save."
-           data-vi="Xử lý lãi suất thay đổi theo thời gian, thêm các khoản trả trước hạn, và thấy ngay bạn tiết kiệm được bao nhiêu thời gian và tiền bạc.">Handle interest rates that change over time, add early repayments, and instantly see how much time and money you save.</p>
+           data-vi="Xử lý lãi suất thay đổi theo thời gian, thêm các khoản trả trước hạn, và thấy ngay bạn tiết kiệm được bao nhiêu thời gian và tiền bạc." data-id="Atur suku bunga yang berubah seiring waktu, tambahkan pelunasan dipercepat, dan langsung lihat berapa banyak waktu dan uang yang Anda hemat." data-th="รองรับอัตราดอกเบี้ยที่เปลี่ยนตามช่วงเวลา เพิ่มการโปะหนี้ และเห็นทันทีว่าคุณประหยัดเวลาและเงินได้เท่าไร" data-pt="Trabalhe com juros que mudam ao longo do tempo, adicione amortizações antecipadas e veja na hora quanto tempo e dinheiro você economiza." data-ms="Urus kadar faedah yang berubah mengikut masa, tambah bayaran awal, dan lihat serta-merta berapa banyak masa dan wang yang anda jimat.">Handle interest rates that change over time, add early repayments, and instantly see how much time and money you save.</p>
       </div>
-      <div class="shot"><img data-en="/fincal/screenshots/en/S1.jpg" data-vi="/fincal/screenshots/vi/S1.jpg" src="/fincal/screenshots/en/S1.jpg" loading="lazy" width="250" height="543" alt="Loan result summary showing the interest saved and the months cut by an early repayment"></div>
+      <div class="shot"><img data-en="/fincal/screenshots/en/S1.jpg" data-vi="/fincal/screenshots/vi/S1.jpg" data-th="/fincal/screenshots/th/S1.jpg" data-pt="/fincal/screenshots/pt-br/S1.jpg" data-ms="/fincal/screenshots/ms/S1.jpg" src="/fincal/screenshots/en/S1.jpg" loading="lazy" width="250" height="543" alt="Loan result summary showing the interest saved and the months cut by an early repayment"></div>
     </div>
 
     <div class="feature">
       <div class="ftext">
         <span class="num">03</span>
-        <h3 data-en="Watch your savings grow" data-vi="Theo dõi khoản tích lũy lớn dần">Watch your savings grow</h3>
+        <h3 data-en="Watch your savings grow" data-vi="Theo dõi khoản tích lũy lớn dần" data-id="Pantau tabungan Anda bertumbuh" data-th="ดูเงินออมของคุณเติบโต" data-pt="Acompanhe seu dinheiro crescer" data-ms="Lihat simpanan anda berkembang">Watch your savings grow</h3>
         <p data-en="Project compound growth with regular contributions and a clear year-by-year breakdown."
-           data-vi="Dự phóng tăng trưởng lãi kép có đóng góp định kỳ kèm bảng chi tiết theo từng năm.">Project compound growth with regular contributions and a clear year-by-year breakdown.</p>
+           data-vi="Dự phóng tăng trưởng lãi kép có đóng góp định kỳ kèm bảng chi tiết theo từng năm." data-id="Proyeksikan pertumbuhan bunga majemuk dengan setoran rutin dan rincian tahunan yang jelas." data-th="คาดการณ์การเติบโตแบบทบต้นพร้อมการฝากเพิ่มเป็นประจำ และตารางแยกรายปีที่ชัดเจน" data-pt="Projete o crescimento com juros compostos e aportes regulares, com um detalhamento claro ano a ano." data-ms="Unjurkan pertumbuhan kompaun dengan caruman berkala dan pecahan tahun demi tahun yang jelas.">Project compound growth with regular contributions and a clear year-by-year breakdown.</p>
       </div>
-      <div class="shot"><img data-en="/fincal/screenshots/en/S4.jpg" data-vi="/fincal/screenshots/vi/S4.jpg" src="/fincal/screenshots/en/S4.jpg" loading="lazy" width="250" height="543" alt="Compound interest result with growth chart"></div>
+      <div class="shot"><img data-en="/fincal/screenshots/en/S4.jpg" data-vi="/fincal/screenshots/vi/S4.jpg" data-th="/fincal/screenshots/th/S4.jpg" data-pt="/fincal/screenshots/pt-br/S4.jpg" data-ms="/fincal/screenshots/ms/S4.jpg" src="/fincal/screenshots/en/S4.jpg" loading="lazy" width="250" height="543" alt="Compound interest result with growth chart"></div>
     </div>
 
     <div class="feature">
       <div class="ftext">
         <span class="num">04</span>
-        <h3 data-en="Keep a record" data-vi="Lưu lại để tra cứu">Keep a record</h3>
+        <h3 data-en="Keep a record" data-vi="Lưu lại để tra cứu" data-id="Simpan catatan" data-th="เก็บประวัติไว้" data-pt="Guarde um histórico" data-ms="Simpan rekod">Keep a record</h3>
         <p data-en="Every calculation is saved automatically, so you can reopen and tweak it anytime."
-           data-vi="Mọi phép tính được lưu tự động, bạn có thể mở lại và chỉnh sửa bất cứ lúc nào.">Every calculation is saved automatically, so you can reopen and tweak it anytime.</p>
+           data-vi="Mọi phép tính được lưu tự động, bạn có thể mở lại và chỉnh sửa bất cứ lúc nào." data-id="Setiap perhitungan tersimpan otomatis, jadi Anda bisa membukanya lagi dan mengubahnya kapan saja." data-th="ทุกการคำนวณถูกบันทึกอัตโนมัติ คุณจึงเปิดดูและปรับแก้ได้ทุกเมื่อ" data-pt="Todo cálculo é salvo automaticamente, para você reabrir e ajustar quando quiser." data-ms="Setiap kiraan disimpan secara automatik, jadi anda boleh membuka dan mengubahnya bila-bila masa.">Every calculation is saved automatically, so you can reopen and tweak it anytime.</p>
       </div>
-      <div class="shot"><img data-en="/fincal/screenshots/en/S7.jpg" data-vi="/fincal/screenshots/vi/S7.jpg" src="/fincal/screenshots/en/S7.jpg" loading="lazy" width="250" height="543" alt="History list with several saved calculations"></div>
+      <div class="shot"><img data-en="/fincal/screenshots/en/S7.jpg" data-vi="/fincal/screenshots/vi/S7.jpg" data-th="/fincal/screenshots/th/S7.jpg" data-pt="/fincal/screenshots/pt-br/S7.jpg" data-ms="/fincal/screenshots/ms/S7.jpg" src="/fincal/screenshots/en/S7.jpg" loading="lazy" width="250" height="543" alt="History list with several saved calculations"></div>
     </div>
 
     <div class="feature">
       <div class="ftext">
         <span class="num">05</span>
-        <h3 data-en="Save your scenarios" data-vi="Lưu các kịch bản">Save your scenarios</h3>
+        <h3 data-en="Save your scenarios" data-vi="Lưu các kịch bản" data-id="Simpan skenario Anda" data-th="บันทึกสถานการณ์ของคุณ" data-pt="Salve seus cenários" data-ms="Simpan senario anda">Save your scenarios</h3>
         <p data-en="Keep favourite setups as named scenarios and compare them side by side - all fully offline, no account, your amounts never leave your phone."
-           data-vi="Giữ các thiết lập yêu thích thành kịch bản có tên và so sánh cạnh nhau - hoàn toàn ngoại tuyến, không tài khoản, các con số không bao giờ rời điện thoại.">Keep favourite setups as named scenarios and compare them side by side - all fully offline, no account, your amounts never leave your phone.</p>
+           data-vi="Giữ các thiết lập yêu thích thành kịch bản có tên và so sánh cạnh nhau - hoàn toàn ngoại tuyến, không tài khoản, các con số không bao giờ rời điện thoại." data-id="Simpan pengaturan favorit sebagai skenario bernama dan bandingkan berdampingan - sepenuhnya offline, tanpa akun, angka Anda tidak pernah keluar dari ponsel." data-th="เก็บการตั้งค่าที่ชอบเป็นสถานการณ์พร้อมชื่อ และเปรียบเทียบแบบเคียงข้างกัน - ออฟไลน์ทั้งหมด ไม่ต้องมีบัญชี ตัวเลขของคุณไม่เคยออกจากโทรศัพท์" data-pt="Guarde suas configurações favoritas como cenários com nome e compare lado a lado - tudo offline, sem conta, seus valores nunca saem do celular." data-ms="Simpan tetapan kegemaran sebagai senario bernama dan bandingkan secara sebelah-menyebelah - sepenuhnya luar talian, tanpa akaun, angka anda tidak pernah keluar dari telefon.">Keep favourite setups as named scenarios and compare them side by side - all fully offline, no account, your amounts never leave your phone.</p>
       </div>
-      <div class="shot"><img data-en="/fincal/screenshots/en/S8.jpg" data-vi="/fincal/screenshots/vi/S8.jpg" src="/fincal/screenshots/en/S8.jpg" loading="lazy" width="250" height="543" alt="Saved scenarios list with named scenarios"></div>
+      <div class="shot"><img data-en="/fincal/screenshots/en/S8.jpg" data-vi="/fincal/screenshots/vi/S8.jpg" data-th="/fincal/screenshots/th/S8.jpg" data-pt="/fincal/screenshots/pt-br/S8.jpg" data-ms="/fincal/screenshots/ms/S8.jpg" src="/fincal/screenshots/en/S8.jpg" loading="lazy" width="250" height="543" alt="Saved scenarios list with named scenarios"></div>
     </div>
   </section>
 
   <!-- ===================== HIGHLIGHTS ===================== -->
   <section>
-    <h2 class="section-title" data-en="Feature highlights" data-vi="Tính năng nổi bật">Feature highlights</h2>
+    <h2 class="section-title" data-en="Feature highlights" data-vi="Tính năng nổi bật" data-id="Fitur unggulan" data-th="ฟีเจอร์เด่น" data-pt="Destaques" data-ms="Ciri utama">Feature highlights</h2>
     <div class="highlights">
       <ul id="highlights-en">
         <li>Loan calculator: equal-principal · equal-instalment · flat-rate, with the real effective rate.</li>
@@ -310,12 +315,52 @@
         <li>Giao diện sáng và tối; theo ngôn ngữ điện thoại của bạn.</li>
         <li>100% ngoại tuyến. Không cần tài khoản.</li>
       </ul>
+      <ul id="highlights-id" hidden>
+        <li>Kalkulator pinjaman: pokok tetap · angsuran tetap · bunga flat, dengan bunga efektif sebenarnya.</li>
+        <li>Suku bunga yang berubah dan rencana pelunasan dipercepat (perpendek tenor atau kurangi cicilan).</li>
+        <li>Bunga majemuk dengan setoran rutin dan grafik pertumbuhan.</li>
+        <li>Grafik donat, batang, dan pertumbuhan yang jelas; jadwal per tahun.</li>
+        <li>Riwayat otomatis dan skenario tersimpan.</li>
+        <li>Bagikan hasil apa pun sebagai gambar.</li>
+        <li>Tema terang dan gelap; mengikuti bahasa ponsel Anda.</li>
+        <li>100% offline. Tanpa akun.</li>
+      </ul>
+      <ul id="highlights-th" hidden>
+        <li>เครื่องคำนวณสินเชื่อ: เงินต้นเท่ากัน · ผ่อนเท่ากันทุกงวด · flat rate พร้อมอัตราดอกเบี้ยที่แท้จริง</li>
+        <li>อัตราดอกเบี้ยที่เปลี่ยนตามช่วงเวลา และวางแผนโปะหนี้ (ลดระยะเวลาผ่อนหรือลดค่างวด)</li>
+        <li>ดอกเบี้ยทบต้นพร้อมการฝากเพิ่มเป็นประจำและกราฟการเติบโต</li>
+        <li>กราฟวงกลม กราฟแท่ง และกราฟการเติบโตที่ชัดเจน ตารางรายปี</li>
+        <li>บันทึกประวัติอัตโนมัติและสถานการณ์ที่บันทึกไว้</li>
+        <li>แชร์ผลลัพธ์เป็นรูปภาพได้</li>
+        <li>ธีมสว่างและมืด ใช้ภาษาตามโทรศัพท์ของคุณ</li>
+        <li>ออฟไลน์ 100% ไม่ต้องมีบัญชี</li>
+      </ul>
+      <ul id="highlights-pt" hidden>
+        <li>Calculadora de empréstimo: SAC · Price · taxa flat, com a taxa efetiva real.</li>
+        <li>Juros que mudam ao longo do tempo e planejamento de amortização antecipada (reduzir o prazo ou a parcela).</li>
+        <li>Juros compostos com aportes regulares e gráfico de crescimento.</li>
+        <li>Gráficos de rosca, barras e crescimento claros; tabelas ano a ano.</li>
+        <li>Histórico automático e cenários salvos.</li>
+        <li>Compartilhe qualquer resultado como imagem.</li>
+        <li>Temas claro e escuro; segue o idioma do seu celular.</li>
+        <li>100% offline. Sem precisar de conta.</li>
+      </ul>
+      <ul id="highlights-ms" hidden>
+        <li>Kalkulator pinjaman: pokok sama rata · ansuran sama rata · kadar rata, dengan kadar efektif sebenar.</li>
+        <li>Kadar faedah yang berubah dan perancangan bayaran awal (pendekkan tempoh atau kurangkan ansuran).</li>
+        <li>Faedah kompaun dengan caruman berkala dan carta pertumbuhan.</li>
+        <li>Carta donut, bar dan pertumbuhan yang jelas; jadual tahun demi tahun.</li>
+        <li>Sejarah automatik dan senario tersimpan.</li>
+        <li>Kongsi sebarang keputusan sebagai imej.</li>
+        <li>Tema cerah dan gelap; mengikut bahasa telefon anda.</li>
+        <li>100% luar talian. Tiada akaun diperlukan.</li>
+      </ul>
     </div>
   </section>
 
   <!-- ===================== FAQ ===================== -->
   <section>
-    <h2 class="section-title" data-en="Frequently asked questions" data-vi="Câu hỏi thường gặp">Frequently asked questions</h2>
+    <h2 class="section-title" data-en="Frequently asked questions" data-vi="Câu hỏi thường gặp" data-id="Pertanyaan umum" data-th="คำถามที่พบบ่อย" data-pt="Perguntas frequentes" data-ms="Soalan lazim">Frequently asked questions</h2>
     <div class="faq" id="faq-en">
       <details><summary>Is Fincal free?</summary><div class="answer">Yes. It's free and supported by ads.</div></details>
       <details><summary>Do I need an account?</summary><div class="answer">No. There's no sign-up and no login.</div></details>
@@ -330,12 +375,40 @@
       <details><summary>Số liệu của tôi có bị gửi đi đâu không?</summary><div class="answer">Không. Các con số bạn nhập được giữ trên điện thoại.</div></details>
       <details><summary>Tính được những loại vay nào?</summary><div class="answer">Trả gốc đều, trả góp đều và lãi phẳng, kể cả lãi suất đổi theo thời gian và trả trước hạn.</div></details>
     </div>
+    <div class="faq" id="faq-id" hidden>
+      <details><summary>Apakah Fincal gratis?</summary><div class="answer">Ya. Gratis dan didukung iklan.</div></details>
+      <details><summary>Apakah saya perlu akun?</summary><div class="answer">Tidak. Tanpa pendaftaran dan tanpa login.</div></details>
+      <details><summary>Apakah bisa dipakai offline?</summary><div class="answer">Ya - semuanya berjalan di perangkat Anda.</div></details>
+      <details><summary>Apakah angka saya dikirim ke mana pun?</summary><div class="answer">Tidak. Angka yang Anda masukkan tetap di ponsel Anda.</div></details>
+      <details><summary>Pinjaman apa saja yang bisa dihitung?</summary><div class="answer">Pokok tetap, angsuran tetap, dan bunga flat, termasuk perubahan suku bunga dan pelunasan dipercepat.</div></details>
+    </div>
+    <div class="faq" id="faq-th" hidden>
+      <details><summary>Fincal ใช้ฟรีไหม</summary><div class="answer">ใช่ ใช้ฟรีและมีโฆษณา</div></details>
+      <details><summary>ต้องมีบัญชีไหม</summary><div class="answer">ไม่ต้อง ไม่ต้องสมัครและไม่ต้องล็อกอิน</div></details>
+      <details><summary>ใช้แบบออฟไลน์ได้ไหม</summary><div class="answer">ได้ - ทุกอย่างทำงานบนเครื่องของคุณ</div></details>
+      <details><summary>ตัวเลขของฉันถูกส่งไปที่ไหนไหม</summary><div class="answer">ไม่ ตัวเลขที่คุณกรอกอยู่บนโทรศัพท์ของคุณเท่านั้น</div></details>
+      <details><summary>คำนวณสินเชื่อแบบไหนได้บ้าง</summary><div class="answer">เงินต้นเท่ากัน ผ่อนเท่ากันทุกงวด และ flat rate รวมถึงอัตราดอกเบี้ยที่เปลี่ยนตามช่วงเวลาและการโปะหนี้</div></details>
+    </div>
+    <div class="faq" id="faq-pt" hidden>
+      <details><summary>O Fincal é gratuito?</summary><div class="answer">Sim. É gratuito e mantido por anúncios.</div></details>
+      <details><summary>Preciso de uma conta?</summary><div class="answer">Não. Sem cadastro e sem login.</div></details>
+      <details><summary>Funciona offline?</summary><div class="answer">Sim - tudo roda no seu aparelho.</div></details>
+      <details><summary>Meus números são enviados para algum lugar?</summary><div class="answer">Não. Os valores que você digita ficam no seu celular.</div></details>
+      <details><summary>Quais empréstimos ele calcula?</summary><div class="answer">SAC, Price e taxa flat, incluindo mudanças de taxa ao longo do tempo e amortizações antecipadas.</div></details>
+    </div>
+    <div class="faq" id="faq-ms" hidden>
+      <details><summary>Adakah Fincal percuma?</summary><div class="answer">Ya. Ia percuma dan disokong oleh iklan.</div></details>
+      <details><summary>Perlukah saya akaun?</summary><div class="answer">Tidak. Tiada pendaftaran dan tiada log masuk.</div></details>
+      <details><summary>Bolehkah ia berfungsi luar talian?</summary><div class="answer">Ya - semuanya berjalan dalam peranti anda.</div></details>
+      <details><summary>Adakah angka saya dihantar ke mana-mana?</summary><div class="answer">Tidak. Angka yang anda masukkan kekal dalam telefon anda.</div></details>
+      <details><summary>Pinjaman apa yang boleh dikira?</summary><div class="answer">Pokok sama rata, ansuran sama rata dan kadar rata, termasuk perubahan kadar faedah dan bayaran awal.</div></details>
+    </div>
   </section>
 
   <!-- ===================== FINAL CTA ===================== -->
   <section class="final-cta">
     <h2 data-en="Smart, private finance math - right on your phone."
-        data-vi="Tính toán tài chính thông minh, riêng tư - ngay trên điện thoại.">Smart, private finance math - right on your phone.</h2>
+        data-vi="Tính toán tài chính thông minh, riêng tư - ngay trên điện thoại." data-id="Hitungan keuangan yang cerdas dan privat - langsung di ponsel Anda." data-th="คำนวณการเงินอย่างชาญฉลาดและเป็นส่วนตัว - บนโทรศัพท์ของคุณ" data-pt="Cálculos financeiros inteligentes e privados - direto no seu celular." data-ms="Kiraan kewangan yang bijak dan peribadi - terus di telefon anda.">Smart, private finance math - right on your phone.</h2>
     <div class="cta">
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.namnoit.fincal&amp;referrer=utm_source%3Dnanoko.app%26utm_medium%3Dwebsite%26utm_campaign%3Dweb-fincal-landing" target="_blank" rel="noopener">
         <span class="icon">
@@ -347,7 +420,7 @@
           </svg>
         </span>
         <span class="txt">
-          <span class="sm" data-en="GET IT ON" data-vi="TẢI TRÊN">GET IT ON</span>
+          <span class="sm" data-en="GET IT ON" data-vi="TẢI TRÊN" data-id="TERSEDIA DI" data-th="ดาวน์โหลดได้ที่" data-pt="DISPONÍVEL NO" data-ms="DAPATKAN DI">GET IT ON</span>
           <span class="lg">Google Play</span>
         </span>
       </a>
@@ -358,7 +431,7 @@
           </svg>
         </span>
         <span class="txt">
-          <span class="sm" data-en="DOWNLOAD ON THE" data-vi="TẢI TRÊN">DOWNLOAD ON THE</span>
+          <span class="sm" data-en="DOWNLOAD ON THE" data-vi="TẢI TRÊN" data-id="UNDUH DI" data-th="ดาวน์โหลดได้ที่" data-pt="BAIXAR NA" data-ms="MUAT TURUN DI">DOWNLOAD ON THE</span>
           <span class="lg">App Store</span>
         </span>
       </a>
@@ -368,15 +441,17 @@
 </div>
 
 <footer class="site">
-  <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư">Privacy Policy</a>
-  <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ">Support</a>
+  <a href="/fincal/privacy/" data-en="Privacy Policy" data-vi="Chính sách quyền riêng tư" data-id="Kebijakan Privasi" data-th="นโยบายความเป็นส่วนตัว" data-pt="Política de Privacidade" data-ms="Dasar Privasi">Privacy Policy</a>
+  <a href="/fincal/support/" data-en="Support" data-vi="Hỗ trợ" data-id="Dukungan" data-th="ช่วยเหลือ" data-pt="Suporte" data-ms="Sokongan">Support</a>
   <div style="margin-top:10px">© 2026 <a href="/">Nanoko Studio</a> · Truong Phuong Nam</div>
 </footer>
 
 <script>
   (function () {
     var STORAGE_KEY = "fincal_privacy_lang";
-    var buttons = document.querySelectorAll(".langbar button");
+    var LANGS = ["en", "vi", "id", "th", "pt", "ms"];
+    var HTML_LANG = { pt: "pt-BR" };
+    var sel = document.querySelector(".langsel");
 
     var META = {
       en: {
@@ -386,17 +461,29 @@
       vi: {
         title: "Fincal - Tính lãi vay & lãi kép",
         desc: "Fincal giúp lập kế hoạch vay và tích lũy với biểu đồ rõ ràng. So sánh cách trả nợ, xem lãi suất thực, thử trả trước hạn - hoàn toàn ngoại tuyến và riêng tư."
-      }
+      },
+      id: { title: "Fincal - Kalkulator Pinjaman & Bunga Majemuk", desc: "Fincal membantu merencanakan pinjaman dan menumbuhkan tabungan dengan grafik yang jelas. Bandingkan cara cicilan, lihat bunga efektif, coba pelunasan dipercepat - sepenuhnya offline dan privat." },
+      th: { title: "Fincal - คำนวณสินเชื่อและดอกเบี้ยทบต้น", desc: "Fincal ช่วยวางแผนสินเชื่อและเงินออมด้วยกราฟที่ชัดเจน เปรียบเทียบวิธีผ่อน ดูอัตราดอกเบี้ยที่แท้จริง ลองโปะหนี้ - ออฟไลน์และเป็นส่วนตัวทั้งหมด" },
+      pt: { title: "Fincal - Calculadora de Empréstimo e Juros Compostos", desc: "O Fincal ajuda a planejar empréstimos e fazer seu dinheiro crescer com gráficos claros. Compare formas de pagamento, veja a taxa efetiva real e simule amortizações - totalmente offline e privado." },
+      ms: { title: "Fincal - Kalkulator Pinjaman & Faedah Kompaun", desc: "Fincal membantu merancang pinjaman dan mengembangkan simpanan dengan carta yang jelas. Bandingkan cara bayaran, lihat kadar efektif sebenar, cuba bayaran awal - sepenuhnya luar talian dan peribadi." }
     };
+
+    // Browser language -> page language; "in" is the old code for Indonesian.
+    function match(code) {
+      var base = (code || "").toLowerCase().split("-")[0];
+      if (base === "in") return "id";
+      return LANGS.indexOf(base) >= 0 ? base : null;
+    }
 
     function pickDefault() {
       try {
         var saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === "en" || saved === "vi") return saved;
+        if (LANGS.indexOf(saved) >= 0) return saved;
       } catch (e) {}
       var langs = navigator.languages || [navigator.language || "en"];
       for (var i = 0; i < langs.length; i++) {
-        if ((langs[i] || "").toLowerCase().indexOf("vi") === 0) return "vi";
+        var m = match(langs[i]);
+        if (m) return m;
       }
       return "en";
     }
@@ -407,33 +494,29 @@
     }
 
     function apply(lang, persist) {
-      if (lang !== "vi") lang = "en";
-      var other = lang === "vi" ? "en" : "vi";
-      document.documentElement.lang = lang;
+      if (LANGS.indexOf(lang) < 0) lang = "en";
+      document.documentElement.lang = HTML_LANG[lang] || lang;
+      sel.value = lang;
 
-      buttons.forEach(function (b) {
-        b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
-      });
-
-      // text nodes
-      document.querySelectorAll("[data-en][data-vi]").forEach(function (el) {
+      // text nodes (falls back to English)
+      document.querySelectorAll("[data-en]").forEach(function (el) {
         if (el.tagName === "IMG") return;
         var t = el.getAttribute("data-" + lang);
-        if (t != null) el.textContent = t;
+        el.textContent = t != null ? t : el.getAttribute("data-en");
       });
 
-      // localized images
-      document.querySelectorAll("img[data-en][data-vi]").forEach(function (img) {
-        var src = img.getAttribute("data-" + lang);
-        if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
+      // localized screenshots
+      document.querySelectorAll("img[data-en]").forEach(function (img) {
+        var src = img.getAttribute("data-" + lang) || img.getAttribute("data-en");
+        if (img.getAttribute("src") !== src) img.setAttribute("src", src);
       });
 
-      // swap blocks (highlights, faq)
+      // swap blocks (highlights, faq, calculator and blog links)
       ["highlights", "faq", "calclink", "bloglink"].forEach(function (id) {
-        var on = document.getElementById(id + "-" + lang);
-        var off = document.getElementById(id + "-" + other);
-        if (on) on.hidden = false;
-        if (off) off.hidden = true;
+        LANGS.forEach(function (l) {
+          var el = document.getElementById(id + "-" + l);
+          if (el) el.hidden = l !== lang;
+        });
       });
 
       // meta / title
@@ -447,9 +530,7 @@
       if (persist) { try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {} }
     }
 
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.getAttribute("data-lang"), true); });
-    });
+    sel.addEventListener("change", function () { apply(sel.value, true); });
 
     apply(pickDefault(), false);
   })();
